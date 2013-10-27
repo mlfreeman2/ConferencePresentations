@@ -1,0 +1,32 @@
+*****GENERAL*****
+
+This directory contains the code presented at IBM Innovate 2010, 2011, and 2012.
+
+IBM Innovate 2010: General RFT
+
+IBM Innovate 2011: Hazelcast
+
+IBM Innovate 2012: JythonLauncher
+
+Below are notes regarding the particular demos
+
+
+*****HAZELCAST NOTES*****
+Please launch compiledHazelcastServer/normalMode.cmd on all your test machines before trying to run any demo scripts.
+
+in order to run the work distribution demo please launch ScriptExecutionHandler on all but one of your test machines.
+
+Launch DemoQueueLoader on the last machine in order to push the scripts into the work queue. 
+
+
+
+*****JYTHONLAUNCHER NOTES*****
+Projects are currently set up for RFT version 8.2.1.1 on a 32 bit machine.  
+
+If you are using a newer or older version of RFT or a 64 bit system you will get PYTHONPATH errors
+
+Also if your Jython interpreter is not setup PyDev will say that it cannot find the Interpreter.
+
+To fix these errors follow the slides for configuring PyDev that is included in the Powerpoint folder for Innovate 2012.
+
+

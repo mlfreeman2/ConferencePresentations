@@ -1,0 +1,22 @@
+1) Introduction
+	A) Why
+2) About Jython
+	A) How
+3) PyDev and RFT
+	A) Integration with RFT
+	B) Jython
+	C) Pros
+	D) Cons
+4) Example of the Underlying Methods
+	A) Find
+	B) Type
+	C) Click
+	D) Hover
+	E) Drag
+	F) Select
+	G) Get Properties (multiple types)
+	H) And More
+5) How it Works
+	A) Example
+	B) Demo
+6) Questions

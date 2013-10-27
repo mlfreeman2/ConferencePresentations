@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="1.6" jdk_type="JavaSDK">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="httpclient-4.0.3.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/lib/httpcomponents/httpclient/httpclient-4.0.3-sources.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/RQM_Common/lib/httpcomponents/httpclient/httpclient-4.0.3-sources.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/RQM_Common/lib/httpcomponents/httpclient/httpclient-4.0.3.jar!/"/>
+	</lib>
+	<lib name="httpcore-4.1.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/lib/httpcomponents/httpcore/httpcore-4.1-sources.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/RQM_Common/lib/httpcomponents/httpcore/httpcore-4.1-sources.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/RQM_Common/lib/httpcomponents/httpcore/httpcore-4.1.jar!/"/>
+	</lib>
+	<lib name="httpmime-4.0.3.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/lib/httpcomponents/httpmime/httpmime-4.0.3-sources.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/RQM_Common/lib/httpcomponents/httpmime/httpmime-4.0.3-sources.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/RQM_Common/lib/httpcomponents/httpmime/httpmime-4.0.3.jar!/"/>
+	</lib>
+	<lib name="log4j-1.2.17.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/lib/log4j/log4j-1.2.17-sources.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/RQM_Common/lib/log4j/log4j-1.2.17-sources.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/RQM_Common/lib/log4j/log4j-1.2.17.jar!/"/>
+	</lib>
+	<lib name="jackson-annotations-2.2.0.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/lib/jackson/annotations/jackson-annotations-2.2.0-sources.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/RQM_Common/lib/jackson/annotations/jackson-annotations-2.2.0-sources.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/RQM_Common/lib/jackson/annotations/jackson-annotations-2.2.0.jar!/"/>
+	</lib>
+	<lib name="jackson-core-2.2.0.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/lib/jackson/core/jackson-core-2.2.0-sources.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/RQM_Common/lib/jackson/core/jackson-core-2.2.0-sources.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/RQM_Common/lib/jackson/core/jackson-core-2.2.0.jar!/"/>
+	</lib>
+	<lib name="jackson-databind-2.2.0.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/lib/jackson/databind/jackson-databind-2.2.0-sources.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/RQM_Common/lib/jackson/databind/jackson-databind-2.2.0-sources.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/RQM_Common/lib/jackson/databind/jackson-databind-2.2.0.jar!/"/>
+	</lib>
+	<lib name="apache-mime4j-0.6.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/lib/mime4j/apache-mime4j-0.6-sources.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/RQM_Common/lib/mime4j/apache-mime4j-0.6-sources.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/RQM_Common/lib/mime4j/apache-mime4j-0.6.jar!/"/>
+	</lib>
+	<lib name="commons-logging-1.1.1.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/lib/commons/logging/commons-logging-1.1.1-sources.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/RQM_Common/lib/commons/logging/commons-logging-1.1.1-sources.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/RQM_Common/lib/commons/logging/commons-logging-1.1.1.jar!/"/>
+		<relative-module-javadoc project-related="jar://$PROJECT_DIR$/RQM_Common/lib/commons/logging/commons-logging-1.1.1-javadoc.jar!/"/>
+	</lib>
+</component>

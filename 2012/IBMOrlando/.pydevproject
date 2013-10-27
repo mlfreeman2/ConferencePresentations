@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><?eclipse-pydev version="1.0"?><pydev_project>
+<pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">C:\SVN\IBMInnovate\trunk\jython2.5.2\jython.jar</pydev_property>
+<pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">jython 2.5</pydev_property>
+<pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
+<path>/IBMOrlando</path>
+</pydev_pathproperty>
+<pydev_pathproperty name="org.python.pydev.PROJECT_EXTERNAL_SOURCE_PATH">
+<path>C:\Program Files\IBM\IBMIMShared\plugins\com.ibm.rational.test.ft.autbase_8.2.1.v20120102_1402.jar</path>
+<path>C:\Program Files\IBM\IBMIMShared\plugins\com.ibm.rational.test.ft.clientbase_8.2.1.v20120329_0924.jar</path>
+<path>C:\Program Files\IBM\IBMIMShared\plugins\com.ibm.rational.test.ft.corecomponents_8.2.1.v20120329_0924.jar</path>
+<path>C:\Program Files\IBM\IBMIMShared\plugins\com.ibm.rational.test.ft.domain.html.dojo.testobjects_8.2.1.v20120105_1832.jar</path>
+<path>C:\Program Files\IBM\IBMIMShared\plugins\com.ibm.rational.test.ft.domain.testobjects_8.2.1.v20120105_1832.jar</path>
+<path>C:\Program Files\IBM\IBMIMShared\plugins\com.ibm.rational.test.ft.domain_8.2.1.v20120326_1116.jar</path>
+<path>C:\Program Files\IBM\IBMIMShared\plugins\com.ibm.rational.test.ft.html.sapwebportal.testobjects_8.2.1.v20120105_1832.jar</path>
+<path>C:\Program Files\IBM\IBMIMShared\plugins\com.ibm.rational.test.ft.playback_8.2.1.v20120105_1832.jar</path>
+<path>C:\Program Files\IBM\IBMIMShared\plugins\com.ibm.rational.test.ft.sdk_8.2.1.v20120105_1832.jar</path>
+<path>C:\Program Files\IBM\IBMIMShared\plugins\com.ibm.rational.test.ft.util_8.2.1.v20120109_1958.jar</path>
+<path>C:\Program Files\IBM\IBMIMShared\plugins\com.ibm.test.terminal.testobjects_8.2.1.v20110715_1630.jar</path>
+<path>C:\Program Files\IBM\IBMIMShared\plugins\com.rational.test.ft.sap_8.2.1.v20120105_1832.jar</path>
+<path>C:\Program Files\IBM\IBMIMShared\plugins\com.rational.test.ft.siebel_8.2.1.v20120105_1832.jar</path>
+<path>C:\Program Files\IBM\IBMIMShared\plugins\com.rational.test.ft.wpf_8.2.1.v20120105_1832.jar</path>
+<path>C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.tptp.platform.models_4.6.104.v201109151337.jar</path>
+</pydev_pathproperty>
+</pydev_project>

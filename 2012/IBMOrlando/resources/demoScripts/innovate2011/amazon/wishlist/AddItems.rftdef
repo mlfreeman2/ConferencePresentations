@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScriptDefinition L=".ScriptDefinition">
+	<ScriptName>demoScripts.innovate2011.amazon.wishlist.AddItems</ScriptName>
+	<Language>java</Language>
+	<Map>resources/demoScripts/innovate2011/amazon/wishlist/AddItems.rftxmap</Map>
+	<Datapool />
+	<DatapoolIterator>com.rational.test.ft.datapool.SequentialIterator</DatapoolIterator>
+	<HelperSuper>RationalTestScript</HelperSuper>
+	<ScriptNameMap L=".ScriptDefinitionNameMap"></ScriptNameMap>
+	<Properties L=".PropSet"></Properties>
+	<ScriptEncoding>Cp1252</ScriptEncoding>
+	<KeywordName></KeywordName>
+	<VisualScriptName></VisualScriptName>
+	<DatapoolSet L=".DatapoolSet"></DatapoolSet>
+</ScriptDefinition>

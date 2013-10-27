@@ -1,0 +1,373 @@
+package org.mlfreeman.innovate2013.examples;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.List;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Marshaller;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.mlfreeman.innovate2013.Log4J_Helpers;
+import org.mlfreeman.innovate2013.StringFunctions;
+import org.mlfreeman.innovate2013.network.http.HTTPClient;
+import org.mlfreeman.innovate2013.network.http.rqm.RQM;
+import org.w3._2005.atom.Feed.Entry;
+
+import com.ibm.rqm.xml.bind.Executionresult;
+import com.ibm.rqm.xml.bind.Executionsequence;
+import com.ibm.rqm.xml.bind.Executionworkitem;
+import com.ibm.rqm.xml.bind.Jobscheduler;
+import com.ibm.rqm.xml.bind.Keyword;
+import com.ibm.rqm.xml.bind.Project;
+import com.ibm.rqm.xml.bind.Remotescript;
+import com.ibm.rqm.xml.bind.Request;
+import com.ibm.rqm.xml.bind.Requirement;
+import com.ibm.rqm.xml.bind.Reservation;
+import com.ibm.rqm.xml.bind.Suiteexecutionrecord;
+import com.ibm.rqm.xml.bind.Testcase;
+import com.ibm.rqm.xml.bind.Testplan;
+import com.ibm.rqm.xml.bind.Testscript;
+import com.ibm.rqm.xml.bind.Testsuite;
+import com.ibm.rqm.xml.bind.Testsuitelog;
+import com.ibm.rqm.xml.bind.Tooladapter;
+import com.ibm.rqm.xml.bind.Workitem;
+
+public class GetArtifactByWebID extends JFrame
+{
+    private static final Logger log              = LogManager.getLogger(HTTPClient.class);
+    
+    private static final long   serialVersionUID = -7060335536448188628L;
+    
+    /**
+     * @param args
+     */
+    public static void main(String[] args)
+    {
+        Log4J_Helpers.addRollingFileAppender();
+        new GetArtifactByWebID();
+    }
+    
+    private RQM            session;
+    
+    private Executor       threader     = Executors.newFixedThreadPool(5);
+    
+    private JTextField     userName     = new JTextField(40);
+    
+    private JPasswordField password     = new JPasswordField(40);
+    
+    private JTextField     server       = new JTextField(40);
+    
+    private JComboBox      project      = new JComboBox();
+    
+    private JComboBox      artifactType = new JComboBox();
+    
+    private JTextField     webID        = new JTextField(40);
+    
+    private JButton        exit         = new JButton();
+    
+    private JButton        logIn        = new JButton();
+    
+    private JButton        download     = new JButton();
+    
+    private JLabel         label        = new JLabel("Loading...");
+    
+    private JLabel         iconLabel    = new JLabel();
+    
+    public GetArtifactByWebID()
+    {
+        setTitle("Get RQM Artifact By Web ID");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocation(100, 100);
+        setSize(780, 220);
+        setMinimumSize(new Dimension(780, 220));
+        setPreferredSize(getSize());
+        setResizable(false);
+        setLayout(null);
+        getContentPane().setBackground(Color.white);
+        
+        JLabel userNameLbl = new JLabel("Username:");
+        userNameLbl.setToolTipText("RQM User Name");
+        add(userNameLbl);
+        userNameLbl.setSize(100, 20);
+        userNameLbl.setLocation(10, 10);
+        
+        userName.setToolTipText("RQM User Name");
+        add(userName);
+        userName.setSize(228, 20);
+        userName.setLocation(100, 10);
+        
+        JLabel passwordLbl = new JLabel("Password:");
+        passwordLbl.setToolTipText("RQM User Password");
+        add(passwordLbl);
+        passwordLbl.setSize(100, 20);
+        passwordLbl.setLocation(10, 40);
+        
+        password.setToolTipText("RQM User Password");
+        add(password);
+        password.setSize(228, 20);
+        password.setLocation(100, 40);
+        
+        JLabel serverLbl = new JLabel("Server:");
+        serverLbl.setToolTipText("RQM Server");
+        add(serverLbl);
+        serverLbl.setSize(100, 20);
+        serverLbl.setLocation(10, 70);
+        
+        server.setToolTipText("RQM Server");
+        add(server);
+        server.setSize(228, 20);
+        server.setLocation(100, 70);
+        
+        exit.setToolTipText("Exit");
+        add(exit);
+        exit.setSize(75, 25);
+        exit.setLocation(100, 100);
+        exit.setText("Exit");
+        exit.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent arg0)
+            {
+                GetArtifactByWebID.this.setVisible(false);
+                GetArtifactByWebID.this.dispose();
+            }
+        });
+        
+        logIn.setToolTipText("Log In");
+        add(logIn);
+        logIn.setSize(100, 25);
+        logIn.setLocation(228, 100);
+        logIn.setText("Log In");
+        logIn.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent arg0)
+            {
+                if (session != null)
+                {
+                    logIn.setText("Log In");
+                    
+                    project.setEnabled(false);
+                    project.removeAllItems();
+                    
+                    artifactType.setEnabled(false);
+                    
+                    webID.setEnabled(false);
+                    webID.setText("");
+                    
+                    download.setEnabled(false);
+                    
+                    session = null;
+                    return;
+                }
+                
+                iconLabel.setVisible(true);
+                label.setVisible(true);
+                
+                threader.execute(new LoginRunnable());
+            }
+        });
+        
+        JLabel projectLbl = new JLabel("Project:");
+        projectLbl.setToolTipText("RQM Project");
+        add(projectLbl);
+        projectLbl.setSize(100, 20);
+        projectLbl.setLocation(450, 10);
+        
+        project.setToolTipText("RQM Project");
+        add(project);
+        project.setSize(215, 20);
+        project.setLocation(500, 10);
+        project.setEnabled(false);
+        
+        JLabel artifactTypeLbl = new JLabel("Artifact Type:");
+        artifactTypeLbl.setToolTipText("Artifact Type");
+        add(artifactTypeLbl);
+        artifactTypeLbl.setSize(100, 20);
+        artifactTypeLbl.setLocation(420, 40);
+        
+        artifactType.setToolTipText("RQM Artifact Type");
+        add(artifactType);
+        artifactType.setSize(215, 20);
+        artifactType.setLocation(500, 40);
+        artifactType.setEnabled(false);
+        
+        artifactType.addItem(new DropdownEntry("Test Plan", Testplan.class.getCanonicalName()));
+        artifactType.addItem(new DropdownEntry("Test Case", Testcase.class.getCanonicalName()));
+        artifactType.addItem(new DropdownEntry("Test Script", Testscript.class.getCanonicalName()));
+        artifactType.addItem(new DropdownEntry("Remote Script", Remotescript.class.getCanonicalName()));
+        artifactType.addItem(new DropdownEntry("Keyword", Keyword.class.getCanonicalName()));
+        artifactType.addItem(new DropdownEntry("Test Suite", Testsuite.class.getCanonicalName()));
+        artifactType.addItem(new DropdownEntry("Test Suite Log", Testsuitelog.class.getCanonicalName()));
+        artifactType.addItem(new DropdownEntry("Execution Work Item", Executionworkitem.class.getCanonicalName()));
+        artifactType.addItem(new DropdownEntry("Suite Execution Record", Suiteexecutionrecord.class.getCanonicalName()));
+        artifactType.addItem(new DropdownEntry("Execution Result", Executionresult.class.getCanonicalName()));
+        artifactType.addItem(new DropdownEntry("Requirement", Requirement.class.getCanonicalName()));
+        artifactType.addItem(new DropdownEntry("Request", Request.class.getCanonicalName()));
+        artifactType.addItem(new DropdownEntry("Reservation", Reservation.class.getCanonicalName()));
+        artifactType.addItem(new DropdownEntry("Work Item", Workitem.class.getCanonicalName()));
+        artifactType.addItem(new DropdownEntry("Tool Adapter", Tooladapter.class.getCanonicalName()));
+        artifactType.addItem(new DropdownEntry("Execution Sequence", Executionsequence.class.getCanonicalName()));
+        artifactType.addItem(new DropdownEntry("Job Scheduler", Jobscheduler.class.getCanonicalName()));
+        
+        JLabel webUIIDLbl = new JLabel("Web UI ID:");
+        webUIIDLbl.setToolTipText("ID as shown in the RQM UI");
+        add(webUIIDLbl);
+        webUIIDLbl.setSize(100, 20);
+        webUIIDLbl.setLocation(420, 70);
+        
+        webID.setToolTipText("ID as shown in the RQM UI");
+        add(webID);
+        webID.setSize(215, 20);
+        webID.setLocation(500, 70);
+        webID.setEnabled(false);
+        
+        download.setToolTipText("Download");
+        add(download);
+        download.setSize(150, 25);
+        download.setLocation(500, 100);
+        download.setText("Download");
+        download.setEnabled(false);
+        download.addActionListener(new ActionListener()
+        {
+            @SuppressWarnings({"unchecked", "rawtypes"})
+            @Override
+            public void actionPerformed(ActionEvent arg0)
+            {
+                iconLabel.setVisible(true);
+                label.setVisible(true);
+                
+                try
+                {
+                    DropdownEntry projDDE = (DropdownEntry) project.getSelectedItem();
+                    DropdownEntry artifactDDE = (DropdownEntry) artifactType.getSelectedItem();
+                    Class c = Class.forName(artifactDDE.value);
+                    Object o = session.GetArtifactByWebID(c, projDDE.value, Integer.parseInt(webID.getText()));
+                    JFileChooser jfc = new JFileChooser("C:\\");
+                    if (jfc.showSaveDialog(GetArtifactByWebID.this) == JFileChooser.APPROVE_OPTION)
+                    {
+                        File file = jfc.getSelectedFile();
+                        JAXBContext context = JAXBContext.newInstance(c);
+                        
+                        Marshaller m = context.createMarshaller();
+                        m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+                        
+                        m.marshal(o, new FileOutputStream(file));
+                    }
+                }
+                catch (Exception e)
+                {
+                    log.error("Unhandled Exception", e);
+                }
+                iconLabel.setVisible(false);
+                label.setVisible(false);
+            }
+        });
+        
+        ImageIcon imageIcon = new ImageIcon(this.getClass().getClassLoader().getResource("img/spinner.gif"));
+        imageIcon.setImageObserver(iconLabel);
+        iconLabel.setIcon(imageIcon);
+        
+        add(iconLabel);
+        iconLabel.setLocation(100, 150);
+        iconLabel.setSize(20, 20);
+        iconLabel.setVisible(false);
+        
+        add(label);
+        label.setLocation(120, 150);
+        label.setSize(100, 25);
+        label.setVisible(false);
+        setFocusCycleRoot(true);
+        
+        pack();
+        setVisible(true);
+    }
+    
+    private class LoginRunnable implements Runnable
+    {
+        @Override
+        public void run()
+        {
+            String password = new String(GetArtifactByWebID.this.password.getPassword());
+            String userName = GetArtifactByWebID.this.userName.getText();
+            String server = GetArtifactByWebID.this.server.getText();
+            
+            if (StringFunctions.isNullOrWhitespace(userName))
+            {
+                JOptionPane.showMessageDialog(GetArtifactByWebID.this, "Please supply a username to log in with.", "Credential Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            
+            if (StringFunctions.isNullOrWhitespace(password))
+            {
+                JOptionPane.showMessageDialog(GetArtifactByWebID.this, "Please supply a password to log in with.", "Credential Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            
+            if (StringFunctions.isNullOrWhitespace(server))
+            {
+                JOptionPane.showMessageDialog(GetArtifactByWebID.this, "Please supply a server to log in with.", "Credential Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            
+            session = new RQM(server, userName, password);
+            if (!session.logIn())
+            {
+                JOptionPane.showMessageDialog(GetArtifactByWebID.this, "Unable to log in to RQM", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            
+            logIn.setText("Log Out");
+            
+            List<Entry> projects = session.GetProjects();
+            for (Entry e : projects)
+            {
+                Project p = e.getContent().getProject();
+                project.addItem(new DropdownEntry(p.getTitle(), p.getAlias().get(0).getValue()));
+            }
+            
+            project.setEnabled(true);
+            artifactType.setEnabled(true);
+            webID.setEnabled(true);
+            download.setEnabled(true);
+            
+            iconLabel.setVisible(false);
+            label.setVisible(false);
+        }
+    }
+    
+    private static class DropdownEntry
+    {
+        public String display;
+        
+        public String value;
+        
+        public DropdownEntry(String display, String value)
+        {
+            this.display = display;
+            this.value = value;
+        }
+        
+        public String toString()
+        {
+            return display;
+        }
+    }
+}

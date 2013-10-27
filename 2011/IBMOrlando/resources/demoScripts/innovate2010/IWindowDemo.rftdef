@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScriptDefinition L=".ScriptDefinition">
+	<ScriptName>demoScripts.innovate2010.IWindowDemo</ScriptName>
+	<Language>java</Language>
+	<Map>resources/demoScripts/innovate2010/IWindowDemo.rftxmap</Map>
+	<Datapool />
+	<DatapoolIterator></DatapoolIterator>
+	<HelperSuper></HelperSuper>
+	<ScriptNameMap L=".ScriptDefinitionNameMap"></ScriptNameMap>
+	<Properties L=".PropSet"></Properties>
+	<ScriptEncoding></ScriptEncoding>
+	<KeywordName></KeywordName>
+	<VisualScriptName></VisualScriptName>
+	<DatapoolSet L=".DatapoolSet"></DatapoolSet>
+</ScriptDefinition>

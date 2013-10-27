@@ -1,0 +1,262 @@
+package org.mlfreeman.innovate2013.console;
+
+import java.io.BufferedReader;
+import java.io.Console;
+import java.io.IOError;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.io.Reader;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Virtual console layer that can automatically fall back to System.in/System.out if System.console returns null.
+ */
+public abstract class VirtualConsole
+{
+    private static VirtualConsole SystemIO      = new CharacterDevice(new BufferedReader(new InputStreamReader(System.in)), new PrintWriter(System.out, true));
+    private static VirtualConsole SystemConsole = new ConsoleDevice(System.console());
+    private static VirtualConsole DEFAULT       = (System.console() == null) ? SystemIO : SystemConsole;
+    
+    /**
+     * The default system text I/O device.
+     * 
+     * @return the default device
+     */
+    public static VirtualConsole getConsole()
+    {
+        return DEFAULT;
+    }
+    
+    public VirtualConsole format(String fmt, Object...params)
+    {
+        return printf(fmt, params);
+    }
+    
+    public abstract void flush();
+    
+    public abstract VirtualConsole printf(String fmt, Object...params);
+    
+    public abstract String readLine();
+    
+    public abstract String readLine(String fmt, Object...params);
+    
+    public abstract char[] readPassword();
+    
+    public abstract char[] readPassword(String fmt, Object...params);
+    
+    public abstract Reader reader();
+    
+    public abstract PrintWriter writer();
+}
+
+/**
+ * {@link VirtualConsole} implementation wrapping character streams.
+ */
+class CharacterDevice extends VirtualConsole
+{
+    private final BufferedReader reader;
+    private final PrintWriter    writer;
+    
+    public CharacterDevice(BufferedReader reader, PrintWriter writer)
+    {
+        this.reader = reader;
+        this.writer = writer;
+    }
+    
+    @Override
+    public CharacterDevice printf(String fmt, Object...params)
+    {
+        writer.printf(fmt, params);
+        return this;
+    }
+    
+    @Override
+    public String readLine()
+    {
+        try
+        {
+            return reader.readLine();
+        }
+        catch (IOException e)
+        {
+            throw new IOError(e);
+        }
+    }
+    
+    @Override
+    public String readLine(String fmt, Object...params)
+    {
+        writer.printf(fmt, params);
+        return readLine();
+    }
+    
+    @Override
+    public char[] readPassword()
+    {
+        EraserThread et = new EraserThread("");
+        Thread mask = new Thread(et);
+        mask.start();
+        
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        String password = "";
+        
+        try
+        {
+            password = in.readLine();
+        }
+        catch (IOException ioe)
+        {
+            ioe.printStackTrace();
+        }
+        // stop masking
+        et.stopMasking();
+        // return the password entered by the user
+        return password.toCharArray();
+    }
+    
+    @Override
+    public char[] readPassword(String fmt, Object...params)
+    {
+        EraserThread et = new EraserThread(fmt, params);
+        Thread mask = new Thread(et);
+        mask.start();
+
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        String password = "";
+
+        try {
+           password = in.readLine();
+        } catch (IOException ioe) {
+          ioe.printStackTrace();
+        }
+        // stop masking
+        et.stopMasking();
+        // return the password entered by the user
+        return password.toCharArray();
+    }
+    
+    @Override
+    public Reader reader()
+    {
+        return reader;
+    }
+    
+    @Override
+    public PrintWriter writer()
+    {
+        return writer;
+    }
+    
+    @Override
+    public void flush()
+    {
+        // TODO Auto-generated method stub
+        
+    }
+}
+
+class EraserThread implements Runnable
+{
+    private boolean stop;
+    
+    /**
+     * @param The
+     *            prompt displayed to the user
+     */
+    public EraserThread(String prompt, Object...params)
+    {
+        System.out.printf(prompt, params);
+    }
+    
+    /**
+     * Begin masking...display asterisks (*)
+     */
+    public void run()
+    {
+        stop = true;
+        while (stop)
+        {
+            System.out.print("\b*");
+            try
+            {
+                Thread.currentThread().sleep(1);
+            }
+            catch (InterruptedException ie)
+            {
+                ie.printStackTrace();
+            }
+        }
+    }
+    
+    /**
+     * Instruct the thread to stop masking
+     */
+    public void stopMasking()
+    {
+        this.stop = false;
+    }
+}
+
+/**
+ * {@link VirtualConsole} implementation wrapping a {@link Console}.
+ */
+class ConsoleDevice extends VirtualConsole
+{
+    private final Console console;
+    
+    public ConsoleDevice(Console console)
+    {
+        this.console = console;
+    }
+    
+    @Override
+    public VirtualConsole printf(String fmt, Object...params)
+    {
+        console.format(fmt, params);
+        return this;
+    }
+    
+    @Override
+    public Reader reader()
+    {
+        return console.reader();
+    }
+    
+    @Override
+    public String readLine()
+    {
+        return console.readLine();
+    }
+    
+    @Override
+    public String readLine(String fmt, Object...params)
+    {
+        return console.readLine(fmt, params);
+    }
+    
+    @Override
+    public char[] readPassword()
+    {
+        return console.readPassword();
+    }
+    
+    @Override
+    public char[] readPassword(String fmt, Object...params)
+    {
+        return console.readPassword(fmt, params);
+    }
+    
+    @Override
+    public PrintWriter writer()
+    {
+        return console.writer();
+    }
+    
+    @Override
+    public void flush()
+    {
+        console.flush();
+    }
+}

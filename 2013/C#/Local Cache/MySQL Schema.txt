@@ -1,0 +1,128 @@
+-- phpMyAdmin SQL Dump
+-- version 3.4.7.1
+-- http://www.phpmyadmin.net
+--
+-- Host: flqaadmin01.corp.fnfs.net:3306
+-- Generation Time: Apr 21, 2013 at 12:27 AM
+-- Server version: 5.5.21
+-- PHP Version: 5.3.8
+
+SET FOREIGN_KEY_CHECKS=0;
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT=0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Database: `rqmmigration`
+--
+CREATE DATABASE `rqmmigration` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+USE `rqmmigration`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+CREATE TABLE IF NOT EXISTS `categories` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `TestcaseID` int(11) NOT NULL,
+  `Name` varchar(1024) COLLATE utf8_bin NOT NULL,
+  `Value` varchar(1024) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `TestcaseID` (`TestcaseID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `project`
+--
+
+CREATE TABLE IF NOT EXISTS `project` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(1024) COLLATE utf8_bin NOT NULL,
+  `APIName` varchar(1024) COLLATE utf8_bin NOT NULL,
+  `ServerURL` varchar(4096) COLLATE utf8_bin NOT NULL,
+  `ServerID` varchar(4096) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tc_to_ts`
+--
+
+CREATE TABLE IF NOT EXISTS `tc_to_ts` (
+  `TestcaseID` int(11) NOT NULL,
+  `TestscriptID` int(11) NOT NULL,
+  PRIMARY KEY (`TestcaseID`,`TestscriptID`),
+  KEY `TestcaseID` (`TestcaseID`),
+  KEY `TestscriptID` (`TestscriptID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testcase`
+--
+
+CREATE TABLE IF NOT EXISTS `testcase` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `ProjectID` int(11) NOT NULL,
+  `WebID` int(11) NOT NULL,
+  `URL` varchar(4096) COLLATE utf8_bin NOT NULL,
+  `Name` varchar(2048) COLLATE utf8_bin NOT NULL,
+  `Description` text COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `ProjectID` (`ProjectID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testscript`
+--
+
+CREATE TABLE IF NOT EXISTS `testscript` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `ProjectID` int(11) NOT NULL,
+  `WebID` int(11) NOT NULL,
+  `URL` varchar(4096) COLLATE utf8_bin NOT NULL,
+  `Name` varchar(2048) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `ProjectID` (`ProjectID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `categories`
+--
+ALTER TABLE `categories`
+  ADD CONSTRAINT `categories_ibfk_1` FOREIGN KEY (`TestcaseID`) REFERENCES `testcase` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tc_to_ts`
+--
+ALTER TABLE `tc_to_ts`
+  ADD CONSTRAINT `tc_to_ts_ibfk_2` FOREIGN KEY (`TestscriptID`) REFERENCES `testscript` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tc_to_ts_ibfk_1` FOREIGN KEY (`TestcaseID`) REFERENCES `testcase` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `testcase`
+--
+ALTER TABLE `testcase`
+  ADD CONSTRAINT `testcase_ibfk_1` FOREIGN KEY (`ProjectID`) REFERENCES `project` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `testscript`
+--
+ALTER TABLE `testscript`
+  ADD CONSTRAINT `testscript_ibfk_1` FOREIGN KEY (`ProjectID`) REFERENCES `project` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+SET FOREIGN_KEY_CHECKS=1;
+COMMIT;

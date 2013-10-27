@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN" "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+
+<!--
+    This configuration file was written by the eclipse-cs plugin configuration editor
+-->
+<!--
+    Checkstyle-Configuration: Common Checkstyle Config
+    Description: none
+-->
+<module name="Checker">
+  <property name="severity" value="warning"/>
+  <module name="TreeWalker">
+    <module name="AnnotationUseStyle"/>
+    <module name="PackageName">
+      <property name="format" value="^[a-z]+(\.[a-z_][a-z0-9_]*)*$"/>
+    </module>
+    <module name="JavadocVariable">
+      <property name="scope" value="public"/>
+    </module>
+    <module name="JavadocType">
+      <property name="scope" value="public"/>
+    </module>
+    <module name="MissingDeprecated"/>
+    <module name="MissingOverride"/>
+    <module name="NeedBraces"/>
+    <module name="EmptyBlock">
+      <property name="option" value="text"/>
+      <property name="tokens" value="LITERAL_DO, LITERAL_ELSE, LITERAL_IF, LITERAL_FOR, LITERAL_TRY, LITERAL_WHILE, INSTANCE_INIT, STATIC_INIT"/>
+    </module>
+    <module name="AvoidNestedBlocks"/>
+    <module name="ArrayTypeStyle"/>
+    <module name="AvoidStarImport"/>
+    <module name="AvoidStaticImport"/>
+    <module name="EqualsHashCode"/>
+    <module name="StringLiteralEquality"/>
+    <module name="ExplicitInitialization"/>
+    <module name="DefaultComesLast"/>
+    <module name="UnnecessaryParentheses"/>
+    <module name="RedundantImport"/>
+    <module name="ModifierOrder"/>
+    <module name="LeftCurly">
+      <property name="option" value="nl"/>
+      <property name="maxLineLength" value="150"/>
+    </module>
+    <module name="DescendantToken">
+      <property name="tokens" value="EMPTY_STAT"/>
+      <property name="limitedTokens" value="EMPTY_STAT"/>
+      <property name="maximumDepth" value="0"/>
+      <property name="maximumNumber" value="0"/>
+      <property name="maximumMessage" value="Empty statement is not allowed."/>
+    </module>
+    <module name="JavadocMethod">
+      <property name="scope" value="public"/>
+      <property name="allowUndeclaredRTE" value="true"/>
+      <property name="allowMissingPropertyJavadoc" value="true"/>
+      <property name="suppressLoadErrors" value="true"/>
+      <property name="tokens" value="METHOD_DEF"/>
+    </module>
+  </module>
+</module>

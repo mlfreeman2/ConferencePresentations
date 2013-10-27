@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/RQMExamples/src/org/mlfreeman/innovate2013/examples/GetArtifactByWebID.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.mlfreeman.innovate2013.examples.GetArtifactByWebID"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="RQMExamples"/>
+</launchConfiguration>

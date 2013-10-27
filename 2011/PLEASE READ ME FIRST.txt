@@ -1,0 +1,7 @@
+Please launch compiledHazelcastServer/normalMode.cmd on all your test machines before trying to run any demo scripts.
+
+in order to run the work distribution demo please launch ScriptExecutionHandler on all but one of your test machines.
+
+Launch DemoQueueLoader on the last machine in order to push the scripts into the work queue. 
+
+

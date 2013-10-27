@@ -1,0 +1,49 @@
+package org.mlfreeman.innovate2013.examples;
+
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Level;
+import org.apache.log4j.LogManager;
+import org.mlfreeman.innovate2013.console.VirtualConsole;
+import org.mlfreeman.innovate2013.network.http.rqm.RQM;
+
+public class HelloRQMWorld
+{
+    
+    /**
+     * @param args
+     */
+    public static void main(String[] args)
+    {        
+        // set up log4j
+        BasicConfigurator.configure();
+        LogManager.getLogger("org.apache.http").setLevel(Level.ERROR);
+        LogManager.getLogger("org.mlfreeman.innovate2013.network.http.HTTPClient").setLevel(Level.ERROR);
+        
+        VirtualConsole console = VirtualConsole.getConsole();
+        String user = console.readLine("User: ");       
+        String password = new String(console.readPassword("Password: "));       
+        String serverURL = console.readLine("Server: ");
+        
+        RQM rqmSession = new RQM(serverURL, user, password);
+        
+        if (!rqmSession.logIn())
+        {
+            System.out.printf("Unable to log in to RQM at %s as \"%s\".", serverURL, user);
+            console.readLine();
+            return;
+        }
+        
+        RQM.RQMIdentity rqmIdentity = rqmSession.Identity();
+        
+        System.out.printf("Logged in as \"%s\".%n", rqmIdentity.UserID);
+        System.out.println("Roles:");
+        for (String role : rqmIdentity.Roles)
+        {
+            System.out.printf("\t%s%n", role);
+        }
+        System.out.println();
+        System.out.println("Done");
+        console.readLine();
+    }
+    
+}

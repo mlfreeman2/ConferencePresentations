@@ -1,0 +1,315 @@
+2013-06-05 15:46:03,941 DEBUG ThreadSafeClientConnManager:168 - Get connection: HttpRoute[{s}->https://jazz.net], timeout = 0
+2013-06-05 15:46:03,957 DEBUG ConnPoolByRoute:281 - [HttpRoute[{s}->https://jazz.net]] kept alive: 0, issued: 0, allocated: 0 out of 20
+2013-06-05 15:46:03,957 DEBUG ConnPoolByRoute:457 - No free connections [HttpRoute[{s}->https://jazz.net]][null]
+2013-06-05 15:46:03,957 DEBUG ConnPoolByRoute:300 - Available capacity: 2 out of 2 [HttpRoute[{s}->https://jazz.net]][null]
+2013-06-05 15:46:03,957 DEBUG ConnPoolByRoute:484 - Creating new connection [HttpRoute[{s}->https://jazz.net]]
+2013-06-05 15:46:05,174 DEBUG RequestAddCookies:131 - CookieSpec selected: compatibility
+2013-06-05 15:46:05,189 DEBUG DefaultHttpClient:481 - Attempt 1 to execute request
+2013-06-05 15:46:05,189 DEBUG DefaultClientConnection:250 - Sending request: POST /sandbox01-qm/j_security_check HTTP/1.1
+2013-06-05 15:46:05,189 DEBUG wire:78 - >> "POST /sandbox01-qm/j_security_check HTTP/1.1[EOL]"
+2013-06-05 15:46:05,189 DEBUG wire:78 - >> "Content-Length: 45[EOL]"
+2013-06-05 15:46:05,189 DEBUG wire:78 - >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[EOL]"
+2013-06-05 15:46:05,189 DEBUG wire:78 - >> "Host: jazz.net[EOL]"
+2013-06-05 15:46:05,189 DEBUG wire:78 - >> "Connection: Keep-Alive[EOL]"
+2013-06-05 15:46:05,189 DEBUG wire:78 - >> "User-Agent: Apache-HttpClient[EOL]"
+2013-06-05 15:46:05,189 DEBUG wire:78 - >> "[EOL]"
+2013-06-05 15:46:05,189 DEBUG headers:254 - >> POST /sandbox01-qm/j_security_check HTTP/1.1
+2013-06-05 15:46:05,189 DEBUG headers:257 - >> Content-Length: 45
+2013-06-05 15:46:05,189 DEBUG headers:257 - >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2013-06-05 15:46:05,189 DEBUG headers:257 - >> Host: jazz.net
+2013-06-05 15:46:05,189 DEBUG headers:257 - >> Connection: Keep-Alive
+2013-06-05 15:46:05,189 DEBUG headers:257 - >> User-Agent: Apache-HttpClient
+2013-06-05 15:46:05,189 DEBUG wire:78 - >> "j_username=michaelfreeman&j_password=j4zz.n3t"
+2013-06-05 15:46:05,704 DEBUG wire:78 - << "HTTP/1.1 302 Found[EOL]"
+2013-06-05 15:46:05,720 DEBUG wire:78 - << "Connection: Keep-Alive[EOL]"
+2013-06-05 15:46:05,720 DEBUG wire:78 - << "Proxy-Connection: Keep-Alive[EOL]"
+2013-06-05 15:46:05,720 DEBUG wire:78 - << "Date: Wed, 05 Jun 2013 19:46:05 GMT[EOL]"
+2013-06-05 15:46:05,720 DEBUG wire:78 - << "Server: WebSphere Application Server/8.0[EOL]"
+2013-06-05 15:46:05,720 DEBUG wire:78 - << "X-Powered-By: Servlet/3.0[EOL]"
+2013-06-05 15:46:05,720 DEBUG wire:78 - << "Content-Language: en-US[EOL]"
+2013-06-05 15:46:05,720 DEBUG wire:78 - << "Content-Length: 0[EOL]"
+2013-06-05 15:46:05,720 DEBUG wire:78 - << "Expires: Thu, 01 Dec 1994 16:00:00 GMT[EOL]"
+2013-06-05 15:46:05,720 DEBUG wire:78 - << "Cache-Control: no-cache="set-cookie, set-cookie2"[EOL]"
+2013-06-05 15:46:05,720 DEBUG wire:78 - << "Set-Cookie: LtpaToken2=Qu+7R8XHq9tYvqHWBQ6IB2WvzuACfXNEV+2kw+IAPRazyAW7NthCfay54ANpMvf5j2XtTcgG9OOMmOx39bwAgCJtCvkWscPr863vSe3ABumvQTKEVnrLbJ/DT+yvzw02OFsVlQkH+ojDxH+9Kn+HUA/sf+TAEKvGZXKucaGG+36azEx77ntqjNk15qiiwI1oJUBNMTEMDrG0cl8Y2tDh/OJb3WK75r5u6gPc8YGcMZX2/eo3KjGnb2tCJ9gOzzcvTwlMaqTq4HUvdr3VCgOZsaQ5EPHISP2LPSeQxgmnaEkjGbMdRm7tUN4GlAzM8L2G1qUKY9wHiV2noCAZSzpl8ALiskzVkaaMGCdCkxOvi6sadb+RT3JJDt24Iq6pcVatzYt+y2W08GfIj9A1CtHmr1t/i/7ethHyShy1dKHc+5Oqf7RJ4D7rE/EdUptf9iDWMF8bXEnvYDEDjI0b3poLbFmEdE99VToKOXUXCgOww6EIEfh2eR11O01Oju0jvhdFI3aJaPxFfN7i5lp28uRyvwiuDBy1yqHnj92eGtPAegjtaNpi0jxpxN24GjZ2OGTMdF6r97S1e6N0hNQ4WB1g76sxAgag5BmR/rtedHqA8TqCWAE0wy0z7ExDKhfVTiW0b30zdma8IwcEBEuERX7elE9zZxCQaQETQRra8IHEX4pMpO7gqiwbAu8vqeen6Z635hS0eSPEpR9MVmvbxeCtOg==; Path=/; HttpOnly[EOL]"
+2013-06-05 15:46:05,720 DEBUG wire:78 - << "X-jazzweb1: D=333622 t=1370461565118006[EOL]"
+2013-06-05 15:46:05,720 DEBUG wire:78 - << "Location: https://jazz.net/sandbox01-qm/[EOL]"
+2013-06-05 15:46:05,720 DEBUG wire:78 - << "Keep-Alive: timeout=5, max=100[EOL]"
+2013-06-05 15:46:05,720 DEBUG wire:78 - << "[EOL]"
+2013-06-05 15:46:05,720 DEBUG DefaultClientConnection:235 - Receiving response: HTTP/1.1 302 Found
+2013-06-05 15:46:05,720 DEBUG headers:238 - << HTTP/1.1 302 Found
+2013-06-05 15:46:05,720 DEBUG headers:241 - << Connection: Keep-Alive
+2013-06-05 15:46:05,720 DEBUG headers:241 - << Proxy-Connection: Keep-Alive
+2013-06-05 15:46:05,720 DEBUG headers:241 - << Date: Wed, 05 Jun 2013 19:46:05 GMT
+2013-06-05 15:46:05,720 DEBUG headers:241 - << Server: WebSphere Application Server/8.0
+2013-06-05 15:46:05,720 DEBUG headers:241 - << X-Powered-By: Servlet/3.0
+2013-06-05 15:46:05,720 DEBUG headers:241 - << Content-Language: en-US
+2013-06-05 15:46:05,720 DEBUG headers:241 - << Content-Length: 0
+2013-06-05 15:46:05,720 DEBUG headers:241 - << Expires: Thu, 01 Dec 1994 16:00:00 GMT
+2013-06-05 15:46:05,720 DEBUG headers:241 - << Cache-Control: no-cache="set-cookie, set-cookie2"
+2013-06-05 15:46:05,720 DEBUG headers:241 - << Set-Cookie: LtpaToken2=Qu+7R8XHq9tYvqHWBQ6IB2WvzuACfXNEV+2kw+IAPRazyAW7NthCfay54ANpMvf5j2XtTcgG9OOMmOx39bwAgCJtCvkWscPr863vSe3ABumvQTKEVnrLbJ/DT+yvzw02OFsVlQkH+ojDxH+9Kn+HUA/sf+TAEKvGZXKucaGG+36azEx77ntqjNk15qiiwI1oJUBNMTEMDrG0cl8Y2tDh/OJb3WK75r5u6gPc8YGcMZX2/eo3KjGnb2tCJ9gOzzcvTwlMaqTq4HUvdr3VCgOZsaQ5EPHISP2LPSeQxgmnaEkjGbMdRm7tUN4GlAzM8L2G1qUKY9wHiV2noCAZSzpl8ALiskzVkaaMGCdCkxOvi6sadb+RT3JJDt24Iq6pcVatzYt+y2W08GfIj9A1CtHmr1t/i/7ethHyShy1dKHc+5Oqf7RJ4D7rE/EdUptf9iDWMF8bXEnvYDEDjI0b3poLbFmEdE99VToKOXUXCgOww6EIEfh2eR11O01Oju0jvhdFI3aJaPxFfN7i5lp28uRyvwiuDBy1yqHnj92eGtPAegjtaNpi0jxpxN24GjZ2OGTMdF6r97S1e6N0hNQ4WB1g76sxAgag5BmR/rtedHqA8TqCWAE0wy0z7ExDKhfVTiW0b30zdma8IwcEBEuERX7elE9zZxCQaQETQRra8IHEX4pMpO7gqiwbAu8vqeen6Z635hS0eSPEpR9MVmvbxeCtOg==; Path=/; HttpOnly
+2013-06-05 15:46:05,720 DEBUG headers:241 - << X-jazzweb1: D=333622 t=1370461565118006
+2013-06-05 15:46:05,720 DEBUG headers:241 - << Location: https://jazz.net/sandbox01-qm/
+2013-06-05 15:46:05,720 DEBUG headers:241 - << Keep-Alive: timeout=5, max=100
+2013-06-05 15:46:05,735 DEBUG ResponseProcessCookies:121 - Cookie accepted: "[version: 0][name: LtpaToken2][value: Qu+7R8XHq9tYvqHWBQ6IB2WvzuACfXNEV+2kw+IAPRazyAW7NthCfay54ANpMvf5j2XtTcgG9OOMmOx39bwAgCJtCvkWscPr863vSe3ABumvQTKEVnrLbJ/DT+yvzw02OFsVlQkH+ojDxH+9Kn+HUA/sf+TAEKvGZXKucaGG+36azEx77ntqjNk15qiiwI1oJUBNMTEMDrG0cl8Y2tDh/OJb3WK75r5u6gPc8YGcMZX2/eo3KjGnb2tCJ9gOzzcvTwlMaqTq4HUvdr3VCgOZsaQ5EPHISP2LPSeQxgmnaEkjGbMdRm7tUN4GlAzM8L2G1qUKY9wHiV2noCAZSzpl8ALiskzVkaaMGCdCkxOvi6sadb+RT3JJDt24Iq6pcVatzYt+y2W08GfIj9A1CtHmr1t/i/7ethHyShy1dKHc+5Oqf7RJ4D7rE/EdUptf9iDWMF8bXEnvYDEDjI0b3poLbFmEdE99VToKOXUXCgOww6EIEfh2eR11O01Oju0jvhdFI3aJaPxFfN7i5lp28uRyvwiuDBy1yqHnj92eGtPAegjtaNpi0jxpxN24GjZ2OGTMdF6r97S1e6N0hNQ4WB1g76sxAgag5BmR/rtedHqA8TqCWAE0wy0z7ExDKhfVTiW0b30zdma8IwcEBEuERX7elE9zZxCQaQETQRra8IHEX4pMpO7gqiwbAu8vqeen6Z635hS0eSPEpR9MVmvbxeCtOg==][domain: jazz.net][path: /][expiry: null]". 
+2013-06-05 15:46:05,735 DEBUG DefaultHttpClient:538 - Connection can be kept alive for 5000 ms
+2013-06-05 15:46:05,735 DEBUG HTTPClient$2:109 - Redirect requested to location 'https://jazz.net/sandbox01-qm/'
+2013-06-05 15:46:05,735 DEBUG DefaultHttpClient:1005 - Redirecting to 'https://jazz.net/sandbox01-qm/' via HttpRoute[{s}->https://jazz.net]
+2013-06-05 15:46:05,735 DEBUG RequestAddCookies:131 - CookieSpec selected: compatibility
+2013-06-05 15:46:05,735 DEBUG RequestAddCookies:178 - Cookie [version: 0][name: LtpaToken2][value: Qu+7R8XHq9tYvqHWBQ6IB2WvzuACfXNEV+2kw+IAPRazyAW7NthCfay54ANpMvf5j2XtTcgG9OOMmOx39bwAgCJtCvkWscPr863vSe3ABumvQTKEVnrLbJ/DT+yvzw02OFsVlQkH+ojDxH+9Kn+HUA/sf+TAEKvGZXKucaGG+36azEx77ntqjNk15qiiwI1oJUBNMTEMDrG0cl8Y2tDh/OJb3WK75r5u6gPc8YGcMZX2/eo3KjGnb2tCJ9gOzzcvTwlMaqTq4HUvdr3VCgOZsaQ5EPHISP2LPSeQxgmnaEkjGbMdRm7tUN4GlAzM8L2G1qUKY9wHiV2noCAZSzpl8ALiskzVkaaMGCdCkxOvi6sadb+RT3JJDt24Iq6pcVatzYt+y2W08GfIj9A1CtHmr1t/i/7ethHyShy1dKHc+5Oqf7RJ4D7rE/EdUptf9iDWMF8bXEnvYDEDjI0b3poLbFmEdE99VToKOXUXCgOww6EIEfh2eR11O01Oju0jvhdFI3aJaPxFfN7i5lp28uRyvwiuDBy1yqHnj92eGtPAegjtaNpi0jxpxN24GjZ2OGTMdF6r97S1e6N0hNQ4WB1g76sxAgag5BmR/rtedHqA8TqCWAE0wy0z7ExDKhfVTiW0b30zdma8IwcEBEuERX7elE9zZxCQaQETQRra8IHEX4pMpO7gqiwbAu8vqeen6Z635hS0eSPEpR9MVmvbxeCtOg==][domain: jazz.net][path: /][expiry: null] match [(secure)jazz.net:443/sandbox01-qm/]
+2013-06-05 15:46:05,735 DEBUG DefaultHttpClient:481 - Attempt 2 to execute request
+2013-06-05 15:46:05,735 DEBUG DefaultClientConnection:250 - Sending request: GET /sandbox01-qm/ HTTP/1.1
+2013-06-05 15:46:05,735 DEBUG wire:78 - >> "GET /sandbox01-qm/ HTTP/1.1[EOL]"
+2013-06-05 15:46:05,735 DEBUG wire:78 - >> "Host: jazz.net[EOL]"
+2013-06-05 15:46:05,735 DEBUG wire:78 - >> "Connection: Keep-Alive[EOL]"
+2013-06-05 15:46:05,735 DEBUG wire:78 - >> "User-Agent: Apache-HttpClient[EOL]"
+2013-06-05 15:46:05,735 DEBUG wire:78 - >> "Cookie: LtpaToken2=Qu+7R8XHq9tYvqHWBQ6IB2WvzuACfXNEV+2kw+IAPRazyAW7NthCfay54ANpMvf5j2XtTcgG9OOMmOx39bwAgCJtCvkWscPr863vSe3ABumvQTKEVnrLbJ/DT+yvzw02OFsVlQkH+ojDxH+9Kn+HUA/sf+TAEKvGZXKucaGG+36azEx77ntqjNk15qiiwI1oJUBNMTEMDrG0cl8Y2tDh/OJb3WK75r5u6gPc8YGcMZX2/eo3KjGnb2tCJ9gOzzcvTwlMaqTq4HUvdr3VCgOZsaQ5EPHISP2LPSeQxgmnaEkjGbMdRm7tUN4GlAzM8L2G1qUKY9wHiV2noCAZSzpl8ALiskzVkaaMGCdCkxOvi6sadb+RT3JJDt24Iq6pcVatzYt+y2W08GfIj9A1CtHmr1t/i/7ethHyShy1dKHc+5Oqf7RJ4D7rE/EdUptf9iDWMF8bXEnvYDEDjI0b3poLbFmEdE99VToKOXUXCgOww6EIEfh2eR11O01Oju0jvhdFI3aJaPxFfN7i5lp28uRyvwiuDBy1yqHnj92eGtPAegjtaNpi0jxpxN24GjZ2OGTMdF6r97S1e6N0hNQ4WB1g76sxAgag5BmR/rtedHqA8TqCWAE0wy0z7ExDKhfVTiW0b30zdma8IwcEBEuERX7elE9zZxCQaQETQRra8IHEX4pMpO7gqiwbAu8vqeen6Z635hS0eSPEpR9MVmvbxeCtOg==[EOL]"
+2013-06-05 15:46:05,735 DEBUG wire:78 - >> "[EOL]"
+2013-06-05 15:46:05,735 DEBUG headers:254 - >> GET /sandbox01-qm/ HTTP/1.1
+2013-06-05 15:46:05,735 DEBUG headers:257 - >> Host: jazz.net
+2013-06-05 15:46:05,735 DEBUG headers:257 - >> Connection: Keep-Alive
+2013-06-05 15:46:05,735 DEBUG headers:257 - >> User-Agent: Apache-HttpClient
+2013-06-05 15:46:05,735 DEBUG headers:257 - >> Cookie: LtpaToken2=Qu+7R8XHq9tYvqHWBQ6IB2WvzuACfXNEV+2kw+IAPRazyAW7NthCfay54ANpMvf5j2XtTcgG9OOMmOx39bwAgCJtCvkWscPr863vSe3ABumvQTKEVnrLbJ/DT+yvzw02OFsVlQkH+ojDxH+9Kn+HUA/sf+TAEKvGZXKucaGG+36azEx77ntqjNk15qiiwI1oJUBNMTEMDrG0cl8Y2tDh/OJb3WK75r5u6gPc8YGcMZX2/eo3KjGnb2tCJ9gOzzcvTwlMaqTq4HUvdr3VCgOZsaQ5EPHISP2LPSeQxgmnaEkjGbMdRm7tUN4GlAzM8L2G1qUKY9wHiV2noCAZSzpl8ALiskzVkaaMGCdCkxOvi6sadb+RT3JJDt24Iq6pcVatzYt+y2W08GfIj9A1CtHmr1t/i/7ethHyShy1dKHc+5Oqf7RJ4D7rE/EdUptf9iDWMF8bXEnvYDEDjI0b3poLbFmEdE99VToKOXUXCgOww6EIEfh2eR11O01Oju0jvhdFI3aJaPxFfN7i5lp28uRyvwiuDBy1yqHnj92eGtPAegjtaNpi0jxpxN24GjZ2OGTMdF6r97S1e6N0hNQ4WB1g76sxAgag5BmR/rtedHqA8TqCWAE0wy0z7ExDKhfVTiW0b30zdma8IwcEBEuERX7elE9zZxCQaQETQRra8IHEX4pMpO7gqiwbAu8vqeen6Z635hS0eSPEpR9MVmvbxeCtOg==
+2013-06-05 15:46:08,559 DEBUG wire:78 - << "HTTP/1.1 302 Found[EOL]"
+2013-06-05 15:46:08,559 DEBUG wire:78 - << "Connection: Keep-Alive[EOL]"
+2013-06-05 15:46:08,559 DEBUG wire:78 - << "Proxy-Connection: Keep-Alive[EOL]"
+2013-06-05 15:46:08,559 DEBUG wire:78 - << "Date: Wed, 05 Jun 2013 19:46:05 GMT[EOL]"
+2013-06-05 15:46:08,559 DEBUG wire:78 - << "Server: WebSphere Application Server/8.0[EOL]"
+2013-06-05 15:46:08,559 DEBUG wire:78 - << "X-Powered-By: Servlet/3.0[EOL]"
+2013-06-05 15:46:08,559 DEBUG wire:78 - << "Content-Language: en-US[EOL]"
+2013-06-05 15:46:08,559 DEBUG wire:78 - << "Content-Length: 0[EOL]"
+2013-06-05 15:46:08,559 DEBUG wire:78 - << "Expires: Thu, 01 Dec 1994 16:00:00 GMT[EOL]"
+2013-06-05 15:46:08,559 DEBUG wire:78 - << "Cache-Control: no-cache="set-cookie, set-cookie2"[EOL]"
+2013-06-05 15:46:08,559 DEBUG wire:78 - << "Set-Cookie: JSESSIONID=0000BoOcCdPJr6bTdi1rNZ4xqZk:-1; Path=/; HttpOnly[EOL]"
+2013-06-05 15:46:08,559 DEBUG wire:78 - << "X-jazzweb1: D=38524 t=1370461565563650[EOL]"
+2013-06-05 15:46:08,559 DEBUG wire:78 - << "Location: https://jazz.net/sandbox01-qm/web[EOL]"
+2013-06-05 15:46:08,559 DEBUG wire:78 - << "Keep-Alive: timeout=5, max=98[EOL]"
+2013-06-05 15:46:08,559 DEBUG wire:78 - << "[EOL]"
+2013-06-05 15:46:08,559 DEBUG DefaultClientConnection:235 - Receiving response: HTTP/1.1 302 Found
+2013-06-05 15:46:08,559 DEBUG headers:238 - << HTTP/1.1 302 Found
+2013-06-05 15:46:08,559 DEBUG headers:241 - << Connection: Keep-Alive
+2013-06-05 15:46:08,559 DEBUG headers:241 - << Proxy-Connection: Keep-Alive
+2013-06-05 15:46:08,559 DEBUG headers:241 - << Date: Wed, 05 Jun 2013 19:46:05 GMT
+2013-06-05 15:46:08,559 DEBUG headers:241 - << Server: WebSphere Application Server/8.0
+2013-06-05 15:46:08,559 DEBUG headers:241 - << X-Powered-By: Servlet/3.0
+2013-06-05 15:46:08,559 DEBUG headers:241 - << Content-Language: en-US
+2013-06-05 15:46:08,559 DEBUG headers:241 - << Content-Length: 0
+2013-06-05 15:46:08,559 DEBUG headers:241 - << Expires: Thu, 01 Dec 1994 16:00:00 GMT
+2013-06-05 15:46:08,559 DEBUG headers:241 - << Cache-Control: no-cache="set-cookie, set-cookie2"
+2013-06-05 15:46:08,559 DEBUG headers:241 - << Set-Cookie: JSESSIONID=0000BoOcCdPJr6bTdi1rNZ4xqZk:-1; Path=/; HttpOnly
+2013-06-05 15:46:08,559 DEBUG headers:241 - << X-jazzweb1: D=38524 t=1370461565563650
+2013-06-05 15:46:08,559 DEBUG headers:241 - << Location: https://jazz.net/sandbox01-qm/web
+2013-06-05 15:46:08,559 DEBUG headers:241 - << Keep-Alive: timeout=5, max=98
+2013-06-05 15:46:08,574 DEBUG ResponseProcessCookies:121 - Cookie accepted: "[version: 0][name: JSESSIONID][value: 0000BoOcCdPJr6bTdi1rNZ4xqZk:-1][domain: jazz.net][path: /][expiry: null]". 
+2013-06-05 15:46:08,574 DEBUG DefaultHttpClient:538 - Connection can be kept alive for 5000 ms
+2013-06-05 15:46:08,574 DEBUG ThreadSafeClientConnManager:217 - Released connection is reusable.
+2013-06-05 15:46:08,574 DEBUG ConnPoolByRoute:369 - Releasing connection [HttpRoute[{s}->https://jazz.net]][null]
+2013-06-05 15:46:08,574 DEBUG ConnPoolByRoute:389 - Pooling connection [HttpRoute[{s}->https://jazz.net]][null]; keep alive for 5000 MILLISECONDS
+2013-06-05 15:46:08,574 DEBUG IdleConnectionHandler:77 - Adding connection at: 1370461568574
+2013-06-05 15:46:08,574 DEBUG ConnPoolByRoute:622 - Notifying no-one, there are no waiting threads
+2013-06-05 15:46:08,574 DEBUG RQM:276 - Login succeeded.
+2013-06-05 15:46:08,574 DEBUG ThreadSafeClientConnManager:168 - Get connection: HttpRoute[{s}->https://jazz.net], timeout = 0
+2013-06-05 15:46:08,574 DEBUG ConnPoolByRoute:281 - [HttpRoute[{s}->https://jazz.net]] kept alive: 1, issued: 0, allocated: 1 out of 20
+2013-06-05 15:46:08,574 DEBUG ConnPoolByRoute:431 - Getting free connection [HttpRoute[{s}->https://jazz.net]][null]
+2013-06-05 15:46:08,574 DEBUG DefaultHttpClient:400 - Stale connection check
+2013-06-05 15:46:08,590 DEBUG RequestAddCookies:131 - CookieSpec selected: compatibility
+2013-06-05 15:46:08,590 DEBUG RequestAddCookies:178 - Cookie [version: 0][name: LtpaToken2][value: Qu+7R8XHq9tYvqHWBQ6IB2WvzuACfXNEV+2kw+IAPRazyAW7NthCfay54ANpMvf5j2XtTcgG9OOMmOx39bwAgCJtCvkWscPr863vSe3ABumvQTKEVnrLbJ/DT+yvzw02OFsVlQkH+ojDxH+9Kn+HUA/sf+TAEKvGZXKucaGG+36azEx77ntqjNk15qiiwI1oJUBNMTEMDrG0cl8Y2tDh/OJb3WK75r5u6gPc8YGcMZX2/eo3KjGnb2tCJ9gOzzcvTwlMaqTq4HUvdr3VCgOZsaQ5EPHISP2LPSeQxgmnaEkjGbMdRm7tUN4GlAzM8L2G1qUKY9wHiV2noCAZSzpl8ALiskzVkaaMGCdCkxOvi6sadb+RT3JJDt24Iq6pcVatzYt+y2W08GfIj9A1CtHmr1t/i/7ethHyShy1dKHc+5Oqf7RJ4D7rE/EdUptf9iDWMF8bXEnvYDEDjI0b3poLbFmEdE99VToKOXUXCgOww6EIEfh2eR11O01Oju0jvhdFI3aJaPxFfN7i5lp28uRyvwiuDBy1yqHnj92eGtPAegjtaNpi0jxpxN24GjZ2OGTMdF6r97S1e6N0hNQ4WB1g76sxAgag5BmR/rtedHqA8TqCWAE0wy0z7ExDKhfVTiW0b30zdma8IwcEBEuERX7elE9zZxCQaQETQRra8IHEX4pMpO7gqiwbAu8vqeen6Z635hS0eSPEpR9MVmvbxeCtOg==][domain: jazz.net][path: /][expiry: null] match [(secure)jazz.net:443/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/]
+2013-06-05 15:46:08,590 DEBUG RequestAddCookies:178 - Cookie [version: 0][name: JSESSIONID][value: 0000BoOcCdPJr6bTdi1rNZ4xqZk:-1][domain: jazz.net][path: /][expiry: null] match [(secure)jazz.net:443/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/]
+2013-06-05 15:46:08,590 DEBUG DefaultHttpClient:481 - Attempt 1 to execute request
+2013-06-05 15:46:08,590 DEBUG DefaultClientConnection:250 - Sending request: GET /sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/ HTTP/1.1
+2013-06-05 15:46:08,590 DEBUG wire:78 - >> "GET /sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/ HTTP/1.1[EOL]"
+2013-06-05 15:46:08,590 DEBUG wire:78 - >> "Host: jazz.net[EOL]"
+2013-06-05 15:46:08,590 DEBUG wire:78 - >> "Connection: Keep-Alive[EOL]"
+2013-06-05 15:46:08,590 DEBUG wire:78 - >> "User-Agent: Apache-HttpClient[EOL]"
+2013-06-05 15:46:08,590 DEBUG wire:78 - >> "Cookie: LtpaToken2=Qu+7R8XHq9tYvqHWBQ6IB2WvzuACfXNEV+2kw+IAPRazyAW7NthCfay54ANpMvf5j2XtTcgG9OOMmOx39bwAgCJtCvkWscPr863vSe3ABumvQTKEVnrLbJ/DT+yvzw02OFsVlQkH+ojDxH+9Kn+HUA/sf+TAEKvGZXKucaGG+36azEx77ntqjNk15qiiwI1oJUBNMTEMDrG0cl8Y2tDh/OJb3WK75r5u6gPc8YGcMZX2/eo3KjGnb2tCJ9gOzzcvTwlMaqTq4HUvdr3VCgOZsaQ5EPHISP2LPSeQxgmnaEkjGbMdRm7tUN4GlAzM8L2G1qUKY9wHiV2noCAZSzpl8ALiskzVkaaMGCdCkxOvi6sadb+RT3JJDt24Iq6pcVatzYt+y2W08GfIj9A1CtHmr1t/i/7ethHyShy1dKHc+5Oqf7RJ4D7rE/EdUptf9iDWMF8bXEnvYDEDjI0b3poLbFmEdE99VToKOXUXCgOww6EIEfh2eR11O01Oju0jvhdFI3aJaPxFfN7i5lp28uRyvwiuDBy1yqHnj92eGtPAegjtaNpi0jxpxN24GjZ2OGTMdF6r97S1e6N0hNQ4WB1g76sxAgag5BmR/rtedHqA8TqCWAE0wy0z7ExDKhfVTiW0b30zdma8IwcEBEuERX7elE9zZxCQaQETQRra8IHEX4pMpO7gqiwbAu8vqeen6Z635hS0eSPEpR9MVmvbxeCtOg==; JSESSIONID=0000BoOcCdPJr6bTdi1rNZ4xqZk:-1[EOL]"
+2013-06-05 15:46:08,590 DEBUG wire:78 - >> "[EOL]"
+2013-06-05 15:46:08,590 DEBUG headers:254 - >> GET /sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/ HTTP/1.1
+2013-06-05 15:46:08,590 DEBUG headers:257 - >> Host: jazz.net
+2013-06-05 15:46:08,590 DEBUG headers:257 - >> Connection: Keep-Alive
+2013-06-05 15:46:08,590 DEBUG headers:257 - >> User-Agent: Apache-HttpClient
+2013-06-05 15:46:08,590 DEBUG headers:257 - >> Cookie: LtpaToken2=Qu+7R8XHq9tYvqHWBQ6IB2WvzuACfXNEV+2kw+IAPRazyAW7NthCfay54ANpMvf5j2XtTcgG9OOMmOx39bwAgCJtCvkWscPr863vSe3ABumvQTKEVnrLbJ/DT+yvzw02OFsVlQkH+ojDxH+9Kn+HUA/sf+TAEKvGZXKucaGG+36azEx77ntqjNk15qiiwI1oJUBNMTEMDrG0cl8Y2tDh/OJb3WK75r5u6gPc8YGcMZX2/eo3KjGnb2tCJ9gOzzcvTwlMaqTq4HUvdr3VCgOZsaQ5EPHISP2LPSeQxgmnaEkjGbMdRm7tUN4GlAzM8L2G1qUKY9wHiV2noCAZSzpl8ALiskzVkaaMGCdCkxOvi6sadb+RT3JJDt24Iq6pcVatzYt+y2W08GfIj9A1CtHmr1t/i/7ethHyShy1dKHc+5Oqf7RJ4D7rE/EdUptf9iDWMF8bXEnvYDEDjI0b3poLbFmEdE99VToKOXUXCgOww6EIEfh2eR11O01Oju0jvhdFI3aJaPxFfN7i5lp28uRyvwiuDBy1yqHnj92eGtPAegjtaNpi0jxpxN24GjZ2OGTMdF6r97S1e6N0hNQ4WB1g76sxAgag5BmR/rtedHqA8TqCWAE0wy0z7ExDKhfVTiW0b30zdma8IwcEBEuERX7elE9zZxCQaQETQRra8IHEX4pMpO7gqiwbAu8vqeen6Z635hS0eSPEpR9MVmvbxeCtOg==; JSESSIONID=0000BoOcCdPJr6bTdi1rNZ4xqZk:-1
+2013-06-05 15:46:09,448 DEBUG wire:78 - << "HTTP/1.1 200 OK[EOL]"
+2013-06-05 15:46:09,448 DEBUG wire:78 - << "Connection: Keep-Alive[EOL]"
+2013-06-05 15:46:09,448 DEBUG wire:78 - << "Proxy-Connection: Keep-Alive[EOL]"
+2013-06-05 15:46:09,448 DEBUG wire:78 - << "Date: Wed, 05 Jun 2013 19:46:09 GMT[EOL]"
+2013-06-05 15:46:09,448 DEBUG wire:78 - << "Server: WebSphere Application Server/8.0[EOL]"
+2013-06-05 15:46:09,448 DEBUG wire:78 - << "X-Powered-By: Servlet/3.0[EOL]"
+2013-06-05 15:46:09,448 DEBUG wire:78 - << "Content-Type: application/atom+xml;charset=UTF-8[EOL]"
+2013-06-05 15:46:09,448 DEBUG wire:78 - << "Content-Language: en-US[EOL]"
+2013-06-05 15:46:09,448 DEBUG wire:78 - << "X-jazzweb1: D=801498 t=1370461568415531[EOL]"
+2013-06-05 15:46:09,448 DEBUG wire:78 - << "Keep-Alive: timeout=5, max=99[EOL]"
+2013-06-05 15:46:09,448 DEBUG wire:78 - << "Transfer-Encoding: chunked[EOL]"
+2013-06-05 15:46:09,448 DEBUG wire:78 - << "[EOL]"
+2013-06-05 15:46:09,448 DEBUG DefaultClientConnection:235 - Receiving response: HTTP/1.1 200 OK
+2013-06-05 15:46:09,448 DEBUG headers:238 - << HTTP/1.1 200 OK
+2013-06-05 15:46:09,448 DEBUG headers:241 - << Connection: Keep-Alive
+2013-06-05 15:46:09,448 DEBUG headers:241 - << Proxy-Connection: Keep-Alive
+2013-06-05 15:46:09,448 DEBUG headers:241 - << Date: Wed, 05 Jun 2013 19:46:09 GMT
+2013-06-05 15:46:09,448 DEBUG headers:241 - << Server: WebSphere Application Server/8.0
+2013-06-05 15:46:09,448 DEBUG headers:241 - << X-Powered-By: Servlet/3.0
+2013-06-05 15:46:09,448 DEBUG headers:241 - << Content-Type: application/atom+xml;charset=UTF-8
+2013-06-05 15:46:09,448 DEBUG headers:241 - << Content-Language: en-US
+2013-06-05 15:46:09,448 DEBUG headers:241 - << X-jazzweb1: D=801498 t=1370461568415531
+2013-06-05 15:46:09,448 DEBUG headers:241 - << Keep-Alive: timeout=5, max=99
+2013-06-05 15:46:09,448 DEBUG headers:241 - << Transfer-Encoding: chunked
+2013-06-05 15:46:09,448 DEBUG DefaultHttpClient:538 - Connection can be kept alive for 5000 ms
+2013-06-05 15:46:09,448 DEBUG wire:78 - << "2000[EOL]"
+2013-06-05 15:46:09,448 DEBUG wire:78 - << "<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title type="text">projects ATOM feed for all project areas</title><id>https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/</id><link href="https://jazz.net/sandbox01-qm/web/console/" rel="alternate"/><link rel="self" href="https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/"/><entry xmlns="http://www.w3.org/2005/Atom"><id>https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/AlohaALM&apos;s+M3+Project+(Quality+Management)</id><updated></updated><title type="text">AlohaCLM&apos;s Project (Quality Management)</title><summary type="text">Alias: AlohaALM%27s+M3+Project+%28Quality+Management%29</summary><link href="https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/AlohaALM&apos;s+M3+Project+(Quality+Management)" rel="alternate" type="application/xml"
+2013-06-05 15:46:09,448 DEBUG wire:78 - << "" title=""/><link href="https://jazz.net/sandbox01-qm/web/console/AlohaCLM%27s+Project+%28Quality+Management%29" rel="enclosure" type="text/html" title="Web Console"/><content type="application/xml"><ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/" xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/" xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/" xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/" xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/" xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1" xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1" xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1" xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1" xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1" xmlns:ns16="http://jazz.net/xmlns/alm/qm/sty"
+2013-06-05 15:46:09,495 DEBUG wire:78 - << "leinfo/v0.1/" xmlns:ns17="http://www.w3.org/1999/XSL/Transform"><ns3:identifier>https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/AlohaALM's M3 Project (Quality Management)</ns3:identifier><ns3:title>AlohaCLM's Project (Quality Management)</ns3:title><ns3:description>Alias: AlohaALM%27s+M3+Project+%28Quality+Management%29</ns3:description><ns2:alias type="string">AlohaALM%27s+M3+Project+%28Quality+Management%29</ns2:alias><ns2:settingsids><ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid><ns2:settingid>com.ibm.rqm.testscript</ns2:settingid><ns2:settingid>com.ibm.rqm.category</ns2:settingid><ns2:settingid>com.ibm.rqm.reporting</ns2:settingid><ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints</ns2:settingid><ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid><ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid><ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid><ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:setting"
+2013-06-05 15:46:09,495 DEBUG wire:78 - << "id><ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid><ns2:settingid>com.ibm.rqm.execution</ns2:settingid><ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid><ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid><ns2:settingid>com.ibm.rqm.risk</ns2:settingid><ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid><ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid></ns2:settingsids></ns2:project></content></entry><entry xmlns="http://www.w3.org/2005/Atom"><id>https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Holdaway+Project+(Quality+Management)</id><updated></updated><title type="text">Holdaway Project (Quality Management)</title><summary type="text">Alias: Holdaway+Project+%28Quality+Management%29</summary><link href="https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Holdaway+Project+(Quality+Management)" rel="alternate" type="application/xml" title=""/><link href="https://ja"
+2013-06-05 15:46:09,495 DEBUG wire:78 - << "zz.net/sandbox01-qm/web/console/Holdaway+Project+%28Quality+Management%29" rel="enclosure" type="text/html" title="Web Console"/><content type="application/xml"><ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/" xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/" xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/" xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/" xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/" xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1" xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1" xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1" xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1" xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1" xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/" xmlns:ns17="http://www.w"
+2013-06-05 15:46:09,495 DEBUG wire:78 - << "3.org/1999/XSL/Transform"><ns3:identifier>https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Holdaway Project (Quality Management)</ns3:identifier><ns3:title>Holdaway Project (Quality Management)</ns3:title><ns3:description>Alias: Holdaway+Project+%28Quality+Management%29</ns3:description><ns2:alias type="string">Holdaway+Project+%28Quality+Management%29</ns2:alias><ns2:settingsids><ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid><ns2:settingid>com.ibm.rqm.testscript</ns2:settingid><ns2:settingid>com.ibm.rqm.category</ns2:settingid><ns2:settingid>com.ibm.rqm.reporting</ns2:settingid><ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints</ns2:settingid><ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid><ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid><ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid><ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid><ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:s"
+2013-06-05 15:46:09,510 DEBUG wire:78 - << "ettingid><ns2:settingid>com.ibm.rqm.execution</ns2:settingid><ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid><ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid><ns2:settingid>com.ibm.rqm.risk</ns2:settingid><ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid><ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid></ns2:settingsids></ns2:project></content></entry><entry xmlns="http://www.w3.org/2005/Atom"><id>https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/stalin08&apos;s+Project+(Quality+Management)</id><updated></updated><title type="text">stalin08&apos;s Project (Quality Management)</title><summary type="text">Alias: stalin08%27s+Project+%28Quality+Management%29</summary><link href="https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/stalin08&apos;s+Project+(Quality+Management)" rel="alternate" type="application/xml" title=""/><link href="https://jazz.net/sandbox01-qm/web/console/st"
+2013-06-05 15:46:09,557 DEBUG wire:78 - << "alin08%27s+Project+%28Quality+Management%29" rel="enclosure" type="text/html" title="Web Console"/><content type="application/xml"><ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/" xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/" xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/" xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/" xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/" xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1" xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1" xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1" xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1" xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1" xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/" xmlns:ns17="http://www.w3.org/1999/XSL/Transform"><ns3"
+2013-06-05 15:46:09,557 DEBUG wire:78 - << "[EOL]"
+2013-06-05 15:46:09,557 DEBUG wire:78 - << "57f[EOL]"
+2013-06-05 15:46:09,557 DEBUG wire:78 - << ":identifier>https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/stalin08's Project (Quality Management)</ns3:identifier><ns3:title>stalin08's Project (Quality Management)</ns3:title><ns3:description>Alias: stalin08%27s+Project+%28Quality+Management%29</ns3:description><ns2:alias type="string">stalin08%27s+Project+%28Quality+Management%29</ns2:alias><ns2:settingsids><ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid><ns2:settingid>com.ibm.rqm.testscript</ns2:settingid><ns2:settingid>com.ibm.rqm.category</ns2:settingid><ns2:settingid>com.ibm.rqm.reporting</ns2:settingid><ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints</ns2:settingid><ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid><ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid><ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid><ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid><ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid><ns2"
+2013-06-05 15:46:09,557 DEBUG wire:78 - << ":settingid>com.ibm.rqm.execution</ns2:settingid><ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid><ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid><ns2:settingid>com.ibm.rqm.risk</ns2:settingid><ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid><ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid></ns2:settingsids></ns2:project></content></entry></feed>"
+2013-06-05 15:46:09,557 DEBUG wire:78 - << "[EOL]"
+2013-06-05 15:46:09,557 DEBUG wire:78 - << "0[EOL]"
+2013-06-05 15:46:09,557 DEBUG wire:78 - << "[EOL]"
+2013-06-05 15:46:09,557 DEBUG ThreadSafeClientConnManager:217 - Released connection is reusable.
+2013-06-05 15:46:09,557 DEBUG ConnPoolByRoute:369 - Releasing connection [HttpRoute[{s}->https://jazz.net]][null]
+2013-06-05 15:46:09,557 DEBUG ConnPoolByRoute:389 - Pooling connection [HttpRoute[{s}->https://jazz.net]][null]; keep alive for 5000 MILLISECONDS
+2013-06-05 15:46:09,557 DEBUG IdleConnectionHandler:77 - Adding connection at: 1370461569557
+2013-06-05 15:46:09,557 DEBUG ConnPoolByRoute:622 - Notifying no-one, there are no waiting threads
+2013-06-05 15:46:09,557 DEBUG ThreadSafeClientConnManager:279 - Closing expired connections
+2013-06-05 15:46:09,557 DEBUG IdleConnectionHandler:144 - Checking for expired connections, now: 1370461569557
+2013-06-05 15:46:11,912 DEBUG ThreadSafeClientConnManager:168 - Get connection: HttpRoute[{s}->https://jazz.net], timeout = 0
+2013-06-05 15:46:11,912 DEBUG ConnPoolByRoute:281 - [HttpRoute[{s}->https://jazz.net]] kept alive: 1, issued: 0, allocated: 1 out of 20
+2013-06-05 15:46:11,912 DEBUG ConnPoolByRoute:431 - Getting free connection [HttpRoute[{s}->https://jazz.net]][null]
+2013-06-05 15:46:11,912 DEBUG DefaultHttpClient:400 - Stale connection check
+2013-06-05 15:46:11,928 DEBUG RequestAddCookies:131 - CookieSpec selected: compatibility
+2013-06-05 15:46:11,928 DEBUG RequestAddCookies:178 - Cookie [version: 0][name: LtpaToken2][value: Qu+7R8XHq9tYvqHWBQ6IB2WvzuACfXNEV+2kw+IAPRazyAW7NthCfay54ANpMvf5j2XtTcgG9OOMmOx39bwAgCJtCvkWscPr863vSe3ABumvQTKEVnrLbJ/DT+yvzw02OFsVlQkH+ojDxH+9Kn+HUA/sf+TAEKvGZXKucaGG+36azEx77ntqjNk15qiiwI1oJUBNMTEMDrG0cl8Y2tDh/OJb3WK75r5u6gPc8YGcMZX2/eo3KjGnb2tCJ9gOzzcvTwlMaqTq4HUvdr3VCgOZsaQ5EPHISP2LPSeQxgmnaEkjGbMdRm7tUN4GlAzM8L2G1qUKY9wHiV2noCAZSzpl8ALiskzVkaaMGCdCkxOvi6sadb+RT3JJDt24Iq6pcVatzYt+y2W08GfIj9A1CtHmr1t/i/7ethHyShy1dKHc+5Oqf7RJ4D7rE/EdUptf9iDWMF8bXEnvYDEDjI0b3poLbFmEdE99VToKOXUXCgOww6EIEfh2eR11O01Oju0jvhdFI3aJaPxFfN7i5lp28uRyvwiuDBy1yqHnj92eGtPAegjtaNpi0jxpxN24GjZ2OGTMdF6r97S1e6N0hNQ4WB1g76sxAgag5BmR/rtedHqA8TqCWAE0wy0z7ExDKhfVTiW0b30zdma8IwcEBEuERX7elE9zZxCQaQETQRra8IHEX4pMpO7gqiwbAu8vqeen6Z635hS0eSPEpR9MVmvbxeCtOg==][domain: jazz.net][path: /][expiry: null] match [(secure)jazz.net:443/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/]
+2013-06-05 15:46:11,928 DEBUG RequestAddCookies:178 - Cookie [version: 0][name: JSESSIONID][value: 0000BoOcCdPJr6bTdi1rNZ4xqZk:-1][domain: jazz.net][path: /][expiry: null] match [(secure)jazz.net:443/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/]
+2013-06-05 15:46:11,928 DEBUG DefaultHttpClient:481 - Attempt 1 to execute request
+2013-06-05 15:46:11,928 DEBUG DefaultClientConnection:250 - Sending request: GET /sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/ HTTP/1.1
+2013-06-05 15:46:11,928 DEBUG wire:78 - >> "GET /sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/ HTTP/1.1[EOL]"
+2013-06-05 15:46:11,928 DEBUG wire:78 - >> "Host: jazz.net[EOL]"
+2013-06-05 15:46:11,928 DEBUG wire:78 - >> "Connection: Keep-Alive[EOL]"
+2013-06-05 15:46:11,928 DEBUG wire:78 - >> "User-Agent: Apache-HttpClient[EOL]"
+2013-06-05 15:46:11,928 DEBUG wire:78 - >> "Cookie: LtpaToken2=Qu+7R8XHq9tYvqHWBQ6IB2WvzuACfXNEV+2kw+IAPRazyAW7NthCfay54ANpMvf5j2XtTcgG9OOMmOx39bwAgCJtCvkWscPr863vSe3ABumvQTKEVnrLbJ/DT+yvzw02OFsVlQkH+ojDxH+9Kn+HUA/sf+TAEKvGZXKucaGG+36azEx77ntqjNk15qiiwI1oJUBNMTEMDrG0cl8Y2tDh/OJb3WK75r5u6gPc8YGcMZX2/eo3KjGnb2tCJ9gOzzcvTwlMaqTq4HUvdr3VCgOZsaQ5EPHISP2LPSeQxgmnaEkjGbMdRm7tUN4GlAzM8L2G1qUKY9wHiV2noCAZSzpl8ALiskzVkaaMGCdCkxOvi6sadb+RT3JJDt24Iq6pcVatzYt+y2W08GfIj9A1CtHmr1t/i/7ethHyShy1dKHc+5Oqf7RJ4D7rE/EdUptf9iDWMF8bXEnvYDEDjI0b3poLbFmEdE99VToKOXUXCgOww6EIEfh2eR11O01Oju0jvhdFI3aJaPxFfN7i5lp28uRyvwiuDBy1yqHnj92eGtPAegjtaNpi0jxpxN24GjZ2OGTMdF6r97S1e6N0hNQ4WB1g76sxAgag5BmR/rtedHqA8TqCWAE0wy0z7ExDKhfVTiW0b30zdma8IwcEBEuERX7elE9zZxCQaQETQRra8IHEX4pMpO7gqiwbAu8vqeen6Z635hS0eSPEpR9MVmvbxeCtOg==; JSESSIONID=0000BoOcCdPJr6bTdi1rNZ4xqZk:-1[EOL]"
+2013-06-05 15:46:11,928 DEBUG wire:78 - >> "[EOL]"
+2013-06-05 15:46:11,928 DEBUG headers:254 - >> GET /sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/ HTTP/1.1
+2013-06-05 15:46:11,928 DEBUG headers:257 - >> Host: jazz.net
+2013-06-05 15:46:11,928 DEBUG headers:257 - >> Connection: Keep-Alive
+2013-06-05 15:46:11,928 DEBUG headers:257 - >> User-Agent: Apache-HttpClient
+2013-06-05 15:46:11,928 DEBUG headers:257 - >> Cookie: LtpaToken2=Qu+7R8XHq9tYvqHWBQ6IB2WvzuACfXNEV+2kw+IAPRazyAW7NthCfay54ANpMvf5j2XtTcgG9OOMmOx39bwAgCJtCvkWscPr863vSe3ABumvQTKEVnrLbJ/DT+yvzw02OFsVlQkH+ojDxH+9Kn+HUA/sf+TAEKvGZXKucaGG+36azEx77ntqjNk15qiiwI1oJUBNMTEMDrG0cl8Y2tDh/OJb3WK75r5u6gPc8YGcMZX2/eo3KjGnb2tCJ9gOzzcvTwlMaqTq4HUvdr3VCgOZsaQ5EPHISP2LPSeQxgmnaEkjGbMdRm7tUN4GlAzM8L2G1qUKY9wHiV2noCAZSzpl8ALiskzVkaaMGCdCkxOvi6sadb+RT3JJDt24Iq6pcVatzYt+y2W08GfIj9A1CtHmr1t/i/7ethHyShy1dKHc+5Oqf7RJ4D7rE/EdUptf9iDWMF8bXEnvYDEDjI0b3poLbFmEdE99VToKOXUXCgOww6EIEfh2eR11O01Oju0jvhdFI3aJaPxFfN7i5lp28uRyvwiuDBy1yqHnj92eGtPAegjtaNpi0jxpxN24GjZ2OGTMdF6r97S1e6N0hNQ4WB1g76sxAgag5BmR/rtedHqA8TqCWAE0wy0z7ExDKhfVTiW0b30zdma8IwcEBEuERX7elE9zZxCQaQETQRra8IHEX4pMpO7gqiwbAu8vqeen6Z635hS0eSPEpR9MVmvbxeCtOg==; JSESSIONID=0000BoOcCdPJr6bTdi1rNZ4xqZk:-1
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "HTTP/1.1 200 OK[EOL]"
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "Connection: Keep-Alive[EOL]"
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "Proxy-Connection: Keep-Alive[EOL]"
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "Date: Wed, 05 Jun 2013 19:46:11 GMT[EOL]"
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "Server: WebSphere Application Server/8.0[EOL]"
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "X-Powered-By: Servlet/3.0[EOL]"
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "Content-Type: application/atom+xml;charset=UTF-8[EOL]"
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "Content-Language: en-US[EOL]"
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "X-jazzweb1: D=96555 t=1370461571756139[EOL]"
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "Keep-Alive: timeout=5, max=89[EOL]"
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "Transfer-Encoding: chunked[EOL]"
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "[EOL]"
+2013-06-05 15:46:12,084 DEBUG DefaultClientConnection:235 - Receiving response: HTTP/1.1 200 OK
+2013-06-05 15:46:12,084 DEBUG headers:238 - << HTTP/1.1 200 OK
+2013-06-05 15:46:12,084 DEBUG headers:241 - << Connection: Keep-Alive
+2013-06-05 15:46:12,084 DEBUG headers:241 - << Proxy-Connection: Keep-Alive
+2013-06-05 15:46:12,084 DEBUG headers:241 - << Date: Wed, 05 Jun 2013 19:46:11 GMT
+2013-06-05 15:46:12,084 DEBUG headers:241 - << Server: WebSphere Application Server/8.0
+2013-06-05 15:46:12,084 DEBUG headers:241 - << X-Powered-By: Servlet/3.0
+2013-06-05 15:46:12,084 DEBUG headers:241 - << Content-Type: application/atom+xml;charset=UTF-8
+2013-06-05 15:46:12,084 DEBUG headers:241 - << Content-Language: en-US
+2013-06-05 15:46:12,084 DEBUG headers:241 - << X-jazzweb1: D=96555 t=1370461571756139
+2013-06-05 15:46:12,084 DEBUG headers:241 - << Keep-Alive: timeout=5, max=89
+2013-06-05 15:46:12,084 DEBUG headers:241 - << Transfer-Encoding: chunked
+2013-06-05 15:46:12,084 DEBUG DefaultHttpClient:538 - Connection can be kept alive for 5000 ms
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "2000[EOL]"
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title type="text">projects ATOM feed for all project areas</title><id>https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/</id><link href="https://jazz.net/sandbox01-qm/web/console/" rel="alternate"/><link rel="self" href="https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/"/><entry xmlns="http://www.w3.org/2005/Atom"><id>https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/AlohaALM&apos;s+M3+Project+(Quality+Management)</id><updated></updated><title type="text">AlohaCLM&apos;s Project (Quality Management)</title><summary type="text">Alias: AlohaALM%27s+M3+Project+%28Quality+Management%29</summary><link href="https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/AlohaALM&apos;s+M3+Project+(Quality+Management)" rel="alternate" type="application/xml"
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "" title=""/><link href="https://jazz.net/sandbox01-qm/web/console/AlohaCLM%27s+Project+%28Quality+Management%29" rel="enclosure" type="text/html" title="Web Console"/><content type="application/xml"><ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/" xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/" xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/" xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/" xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/" xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1" xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1" xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1" xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1" xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1" xmlns:ns16="http://jazz.net/xmlns/alm/qm/sty"
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "leinfo/v0.1/" xmlns:ns17="http://www.w3.org/1999/XSL/Transform"><ns3:identifier>https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/AlohaALM's M3 Project (Quality Management)</ns3:identifier><ns3:title>AlohaCLM's Project (Quality Management)</ns3:title><ns3:description>Alias: AlohaALM%27s+M3+Project+%28Quality+Management%29</ns3:description><ns2:alias type="string">AlohaALM%27s+M3+Project+%28Quality+Management%29</ns2:alias><ns2:settingsids><ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid><ns2:settingid>com.ibm.rqm.testscript</ns2:settingid><ns2:settingid>com.ibm.rqm.category</ns2:settingid><ns2:settingid>com.ibm.rqm.reporting</ns2:settingid><ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints</ns2:settingid><ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid><ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid><ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid><ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:setting"
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "id><ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid><ns2:settingid>com.ibm.rqm.execution</ns2:settingid><ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid><ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid><ns2:settingid>com.ibm.rqm.risk</ns2:settingid><ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid><ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid></ns2:settingsids></ns2:project></content></entry><entry xmlns="http://www.w3.org/2005/Atom"><id>https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Holdaway+Project+(Quality+Management)</id><updated></updated><title type="text">Holdaway Project (Quality Management)</title><summary type="text">Alias: Holdaway+Project+%28Quality+Management%29</summary><link href="https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Holdaway+Project+(Quality+Management)" rel="alternate" type="application/xml" title=""/><link href="https://ja"
+2013-06-05 15:46:12,084 DEBUG wire:78 - << "zz.net/sandbox01-qm/web/console/Holdaway+Project+%28Quality+Management%29" rel="enclosure" type="text/html" title="Web Console"/><content type="application/xml"><ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/" xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/" xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/" xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/" xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/" xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1" xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1" xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1" xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1" xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1" xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/" xmlns:ns17="http://www.w"
+2013-06-05 15:46:12,100 DEBUG wire:78 - << "3.org/1999/XSL/Transform"><ns3:identifier>https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Holdaway Project (Quality Management)</ns3:identifier><ns3:title>Holdaway Project (Quality Management)</ns3:title><ns3:description>Alias: Holdaway+Project+%28Quality+Management%29</ns3:description><ns2:alias type="string">Holdaway+Project+%28Quality+Management%29</ns2:alias><ns2:settingsids><ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid><ns2:settingid>com.ibm.rqm.testscript</ns2:settingid><ns2:settingid>com.ibm.rqm.category</ns2:settingid><ns2:settingid>com.ibm.rqm.reporting</ns2:settingid><ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints</ns2:settingid><ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid><ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid><ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid><ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid><ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:s"
+2013-06-05 15:46:12,100 DEBUG wire:78 - << "ettingid><ns2:settingid>com.ibm.rqm.execution</ns2:settingid><ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid><ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid><ns2:settingid>com.ibm.rqm.risk</ns2:settingid><ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid><ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid></ns2:settingsids></ns2:project></content></entry><entry xmlns="http://www.w3.org/2005/Atom"><id>https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/stalin08&apos;s+Project+(Quality+Management)</id><updated></updated><title type="text">stalin08&apos;s Project (Quality Management)</title><summary type="text">Alias: stalin08%27s+Project+%28Quality+Management%29</summary><link href="https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/stalin08&apos;s+Project+(Quality+Management)" rel="alternate" type="application/xml" title=""/><link href="https://jazz.net/sandbox01-qm/web/console/st"
+2013-06-05 15:46:12,131 DEBUG wire:78 - << "alin08%27s+Project+%28Quality+Management%29" rel="enclosure" type="text/html" title="Web Console"/><content type="application/xml"><ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/" xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/" xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/" xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/" xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/" xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1" xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1" xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1" xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1" xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1" xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/" xmlns:ns17="http://www.w3.org/1999/XSL/Transform"><ns3"
+2013-06-05 15:46:12,131 DEBUG wire:78 - << "[EOL]"
+2013-06-05 15:46:12,131 DEBUG wire:78 - << "57f[EOL]"
+2013-06-05 15:46:12,131 DEBUG wire:78 - << ":identifier>https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/stalin08's Project (Quality Management)</ns3:identifier><ns3:title>stalin08's Project (Quality Management)</ns3:title><ns3:description>Alias: stalin08%27s+Project+%28Quality+Management%29</ns3:description><ns2:alias type="string">stalin08%27s+Project+%28Quality+Management%29</ns2:alias><ns2:settingsids><ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid><ns2:settingid>com.ibm.rqm.testscript</ns2:settingid><ns2:settingid>com.ibm.rqm.category</ns2:settingid><ns2:settingid>com.ibm.rqm.reporting</ns2:settingid><ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints</ns2:settingid><ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid><ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid><ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid><ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid><ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid><ns2"
+2013-06-05 15:46:12,131 DEBUG wire:78 - << ":settingid>com.ibm.rqm.execution</ns2:settingid><ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid><ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid><ns2:settingid>com.ibm.rqm.risk</ns2:settingid><ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid><ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid></ns2:settingsids></ns2:project></content></entry></feed>"
+2013-06-05 15:46:12,131 DEBUG wire:78 - << "[EOL]"
+2013-06-05 15:46:12,131 DEBUG wire:78 - << "0[EOL]"
+2013-06-05 15:46:12,131 DEBUG wire:78 - << "[EOL]"
+2013-06-05 15:46:12,131 DEBUG ThreadSafeClientConnManager:217 - Released connection is reusable.
+2013-06-05 15:46:12,131 DEBUG ConnPoolByRoute:369 - Releasing connection [HttpRoute[{s}->https://jazz.net]][null]
+2013-06-05 15:46:12,131 DEBUG ConnPoolByRoute:389 - Pooling connection [HttpRoute[{s}->https://jazz.net]][null]; keep alive for 5000 MILLISECONDS
+2013-06-05 15:46:12,131 DEBUG IdleConnectionHandler:77 - Adding connection at: 1370461572131
+2013-06-05 15:46:12,131 DEBUG ConnPoolByRoute:622 - Notifying no-one, there are no waiting threads
+2013-06-05 15:46:12,131 DEBUG ThreadSafeClientConnManager:279 - Closing expired connections
+2013-06-05 15:46:12,131 DEBUG IdleConnectionHandler:144 - Checking for expired connections, now: 1370461572131
+2013-06-05 15:47:44,133 DEBUG ThreadSafeClientConnManager:168 - Get connection: HttpRoute[{s}->https://jazz.net], timeout = 0
+2013-06-05 15:47:44,133 DEBUG ConnPoolByRoute:281 - [HttpRoute[{s}->https://jazz.net]] kept alive: 1, issued: 0, allocated: 1 out of 20
+2013-06-05 15:47:44,133 DEBUG ConnPoolByRoute:431 - Getting free connection [HttpRoute[{s}->https://jazz.net]][null]
+2013-06-05 15:47:44,133 DEBUG ConnPoolByRoute:441 - Closing expired free connection [HttpRoute[{s}->https://jazz.net]][null]
+2013-06-05 15:47:44,149 DEBUG DefaultClientConnection:157 - Connection closed
+2013-06-05 15:47:44,149 DEBUG ConnPoolByRoute:457 - No free connections [HttpRoute[{s}->https://jazz.net]][null]
+2013-06-05 15:47:44,149 DEBUG ConnPoolByRoute:300 - Available capacity: 2 out of 2 [HttpRoute[{s}->https://jazz.net]][null]
+2013-06-05 15:47:44,149 DEBUG ConnPoolByRoute:484 - Creating new connection [HttpRoute[{s}->https://jazz.net]]
+2013-06-05 15:47:44,445 DEBUG RequestAddCookies:131 - CookieSpec selected: compatibility
+2013-06-05 15:47:44,445 DEBUG RequestAddCookies:178 - Cookie [version: 0][name: LtpaToken2][value: Qu+7R8XHq9tYvqHWBQ6IB2WvzuACfXNEV+2kw+IAPRazyAW7NthCfay54ANpMvf5j2XtTcgG9OOMmOx39bwAgCJtCvkWscPr863vSe3ABumvQTKEVnrLbJ/DT+yvzw02OFsVlQkH+ojDxH+9Kn+HUA/sf+TAEKvGZXKucaGG+36azEx77ntqjNk15qiiwI1oJUBNMTEMDrG0cl8Y2tDh/OJb3WK75r5u6gPc8YGcMZX2/eo3KjGnb2tCJ9gOzzcvTwlMaqTq4HUvdr3VCgOZsaQ5EPHISP2LPSeQxgmnaEkjGbMdRm7tUN4GlAzM8L2G1qUKY9wHiV2noCAZSzpl8ALiskzVkaaMGCdCkxOvi6sadb+RT3JJDt24Iq6pcVatzYt+y2W08GfIj9A1CtHmr1t/i/7ethHyShy1dKHc+5Oqf7RJ4D7rE/EdUptf9iDWMF8bXEnvYDEDjI0b3poLbFmEdE99VToKOXUXCgOww6EIEfh2eR11O01Oju0jvhdFI3aJaPxFfN7i5lp28uRyvwiuDBy1yqHnj92eGtPAegjtaNpi0jxpxN24GjZ2OGTMdF6r97S1e6N0hNQ4WB1g76sxAgag5BmR/rtedHqA8TqCWAE0wy0z7ExDKhfVTiW0b30zdma8IwcEBEuERX7elE9zZxCQaQETQRra8IHEX4pMpO7gqiwbAu8vqeen6Z635hS0eSPEpR9MVmvbxeCtOg==][domain: jazz.net][path: /][expiry: null] match [(secure)jazz.net:443/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/resources/AlohaALM's+M3+Project+(Quality+Management)/testcase/urn:com.ibm.rqm:testcase:1420]
+2013-06-05 15:47:44,445 DEBUG RequestAddCookies:178 - Cookie [version: 0][name: JSESSIONID][value: 0000BoOcCdPJr6bTdi1rNZ4xqZk:-1][domain: jazz.net][path: /][expiry: null] match [(secure)jazz.net:443/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/resources/AlohaALM's+M3+Project+(Quality+Management)/testcase/urn:com.ibm.rqm:testcase:1420]
+2013-06-05 15:47:44,445 DEBUG DefaultHttpClient:481 - Attempt 1 to execute request
+2013-06-05 15:47:44,445 DEBUG DefaultClientConnection:250 - Sending request: GET /sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/resources/AlohaALM%27s+M3+Project+%28Quality+Management%29/testcase/urn:com.ibm.rqm:testcase:1420 HTTP/1.1
+2013-06-05 15:47:44,445 DEBUG wire:78 - >> "GET /sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/resources/AlohaALM%27s+M3+Project+%28Quality+Management%29/testcase/urn:com.ibm.rqm:testcase:1420 HTTP/1.1[EOL]"
+2013-06-05 15:47:44,445 DEBUG wire:78 - >> "Host: jazz.net[EOL]"
+2013-06-05 15:47:44,445 DEBUG wire:78 - >> "Connection: Keep-Alive[EOL]"
+2013-06-05 15:47:44,445 DEBUG wire:78 - >> "User-Agent: Apache-HttpClient[EOL]"
+2013-06-05 15:47:44,445 DEBUG wire:78 - >> "Cookie: LtpaToken2=Qu+7R8XHq9tYvqHWBQ6IB2WvzuACfXNEV+2kw+IAPRazyAW7NthCfay54ANpMvf5j2XtTcgG9OOMmOx39bwAgCJtCvkWscPr863vSe3ABumvQTKEVnrLbJ/DT+yvzw02OFsVlQkH+ojDxH+9Kn+HUA/sf+TAEKvGZXKucaGG+36azEx77ntqjNk15qiiwI1oJUBNMTEMDrG0cl8Y2tDh/OJb3WK75r5u6gPc8YGcMZX2/eo3KjGnb2tCJ9gOzzcvTwlMaqTq4HUvdr3VCgOZsaQ5EPHISP2LPSeQxgmnaEkjGbMdRm7tUN4GlAzM8L2G1qUKY9wHiV2noCAZSzpl8ALiskzVkaaMGCdCkxOvi6sadb+RT3JJDt24Iq6pcVatzYt+y2W08GfIj9A1CtHmr1t/i/7ethHyShy1dKHc+5Oqf7RJ4D7rE/EdUptf9iDWMF8bXEnvYDEDjI0b3poLbFmEdE99VToKOXUXCgOww6EIEfh2eR11O01Oju0jvhdFI3aJaPxFfN7i5lp28uRyvwiuDBy1yqHnj92eGtPAegjtaNpi0jxpxN24GjZ2OGTMdF6r97S1e6N0hNQ4WB1g76sxAgag5BmR/rtedHqA8TqCWAE0wy0z7ExDKhfVTiW0b30zdma8IwcEBEuERX7elE9zZxCQaQETQRra8IHEX4pMpO7gqiwbAu8vqeen6Z635hS0eSPEpR9MVmvbxeCtOg==; JSESSIONID=0000BoOcCdPJr6bTdi1rNZ4xqZk:-1[EOL]"
+2013-06-05 15:47:44,445 DEBUG wire:78 - >> "[EOL]"
+2013-06-05 15:47:44,445 DEBUG headers:254 - >> GET /sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/resources/AlohaALM%27s+M3+Project+%28Quality+Management%29/testcase/urn:com.ibm.rqm:testcase:1420 HTTP/1.1
+2013-06-05 15:47:44,445 DEBUG headers:257 - >> Host: jazz.net
+2013-06-05 15:47:44,445 DEBUG headers:257 - >> Connection: Keep-Alive
+2013-06-05 15:47:44,445 DEBUG headers:257 - >> User-Agent: Apache-HttpClient
+2013-06-05 15:47:44,445 DEBUG headers:257 - >> Cookie: LtpaToken2=Qu+7R8XHq9tYvqHWBQ6IB2WvzuACfXNEV+2kw+IAPRazyAW7NthCfay54ANpMvf5j2XtTcgG9OOMmOx39bwAgCJtCvkWscPr863vSe3ABumvQTKEVnrLbJ/DT+yvzw02OFsVlQkH+ojDxH+9Kn+HUA/sf+TAEKvGZXKucaGG+36azEx77ntqjNk15qiiwI1oJUBNMTEMDrG0cl8Y2tDh/OJb3WK75r5u6gPc8YGcMZX2/eo3KjGnb2tCJ9gOzzcvTwlMaqTq4HUvdr3VCgOZsaQ5EPHISP2LPSeQxgmnaEkjGbMdRm7tUN4GlAzM8L2G1qUKY9wHiV2noCAZSzpl8ALiskzVkaaMGCdCkxOvi6sadb+RT3JJDt24Iq6pcVatzYt+y2W08GfIj9A1CtHmr1t/i/7ethHyShy1dKHc+5Oqf7RJ4D7rE/EdUptf9iDWMF8bXEnvYDEDjI0b3poLbFmEdE99VToKOXUXCgOww6EIEfh2eR11O01Oju0jvhdFI3aJaPxFfN7i5lp28uRyvwiuDBy1yqHnj92eGtPAegjtaNpi0jxpxN24GjZ2OGTMdF6r97S1e6N0hNQ4WB1g76sxAgag5BmR/rtedHqA8TqCWAE0wy0z7ExDKhfVTiW0b30zdma8IwcEBEuERX7elE9zZxCQaQETQRra8IHEX4pMpO7gqiwbAu8vqeen6Z635hS0eSPEpR9MVmvbxeCtOg==; JSESSIONID=0000BoOcCdPJr6bTdi1rNZ4xqZk:-1
+2013-06-05 15:47:44,882 DEBUG wire:78 - << "HTTP/1.1 200 OK[EOL]"
+2013-06-05 15:47:44,882 DEBUG wire:78 - << "Connection: Keep-Alive[EOL]"
+2013-06-05 15:47:44,882 DEBUG wire:78 - << "Proxy-Connection: Keep-Alive[EOL]"
+2013-06-05 15:47:44,882 DEBUG wire:78 - << "Date: Wed, 05 Jun 2013 19:47:44 GMT[EOL]"
+2013-06-05 15:47:44,882 DEBUG wire:78 - << "Server: WebSphere Application Server/8.0[EOL]"
+2013-06-05 15:47:44,882 DEBUG wire:78 - << "X-Powered-By: Servlet/3.0[EOL]"
+2013-06-05 15:47:44,882 DEBUG wire:78 - << "ETag: "_fj14cJl0EeK0-9aCNyutqA"[EOL]"
+2013-06-05 15:47:44,882 DEBUG wire:78 - << "Content-Type: application/xml[EOL]"
+2013-06-05 15:47:44,882 DEBUG wire:78 - << "Content-Language: en-US[EOL]"
+2013-06-05 15:47:44,882 DEBUG wire:78 - << "Content-Length: 3492[EOL]"
+2013-06-05 15:47:44,882 DEBUG wire:78 - << "X-jazzweb1: D=378506 t=1370461664281146[EOL]"
+2013-06-05 15:47:44,882 DEBUG wire:78 - << "Keep-Alive: timeout=5, max=98[EOL]"
+2013-06-05 15:47:44,882 DEBUG wire:78 - << "[EOL]"
+2013-06-05 15:47:44,882 DEBUG DefaultClientConnection:235 - Receiving response: HTTP/1.1 200 OK
+2013-06-05 15:47:44,882 DEBUG headers:238 - << HTTP/1.1 200 OK
+2013-06-05 15:47:44,882 DEBUG headers:241 - << Connection: Keep-Alive
+2013-06-05 15:47:44,882 DEBUG headers:241 - << Proxy-Connection: Keep-Alive
+2013-06-05 15:47:44,882 DEBUG headers:241 - << Date: Wed, 05 Jun 2013 19:47:44 GMT
+2013-06-05 15:47:44,882 DEBUG headers:241 - << Server: WebSphere Application Server/8.0
+2013-06-05 15:47:44,882 DEBUG headers:241 - << X-Powered-By: Servlet/3.0
+2013-06-05 15:47:44,882 DEBUG headers:241 - << ETag: "_fj14cJl0EeK0-9aCNyutqA"
+2013-06-05 15:47:44,882 DEBUG headers:241 - << Content-Type: application/xml
+2013-06-05 15:47:44,882 DEBUG headers:241 - << Content-Language: en-US
+2013-06-05 15:47:44,882 DEBUG headers:241 - << Content-Length: 3492
+2013-06-05 15:47:44,882 DEBUG headers:241 - << X-jazzweb1: D=378506 t=1370461664281146
+2013-06-05 15:47:44,882 DEBUG headers:241 - << Keep-Alive: timeout=5, max=98
+2013-06-05 15:47:44,882 DEBUG DefaultHttpClient:538 - Connection can be kept alive for 5000 ms
+2013-06-05 15:47:44,929 DEBUG wire:78 - << "<?xml version="1.0" encoding="UTF-8"?><ns2:testcase xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/" xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/" xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/" xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/" xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/" xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1" xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1" xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1" xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1" xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1" xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/" xmlns:ns17="http://www.w3.org/1999/XSL/Transform"><ns2:projectArea alias="AlohaALM%27s+M3+Project+%28Quality+Management%29" href="https://jazz.net/sandbox01-qm/resource/itemOid/com.ibm.team.process.ProjectArea/_VV4yoJWCEeKT7LKuSqKZNQ"/><ns3:identifier>https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/resources/AlohaALM%27s+M3+Project+%28Quality+Management%29/testcase/urn:com.ibm.rqm:testcase:1420</ns3:identifier><ns2:stylesheet href="https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/resources/AlohaALM%27s+M3+Project+%28Quality+Management%29/testcase/urn:com.ibm.rqm:testcase:1420?stylesheet=true"/><ns2:webId>1420</ns2:webId><ns3:title>CuteNameStandard Verify creating a TC</ns3:title><ns3:description>CuteNameStandard Verify creating a TC</ns3:description><ns2:creationDate>2013-03-30T19:55:29.564Z</ns2:creationDate><ns5:updated>2013-03-30T20:00:38.778Z</ns5:updated><ns5:state ns6:resource="https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/process-info/_VV4yoJWCEeKT7LKuSqKZNQ/workflowstate/com.ibm.rqm.process.testcase.workflow/com.ibm.rqm"
+2013-06-05 15:47:44,929 DEBUG wire:64 - << ".planning.common.new">com.ibm.rqm.planning.common.new</ns5:state><ns3:creator ns6:resource="https://jazz.net/sandbox01-jts/resource/itemName/com.ibm.team.repository.Contributor/LarryLPS">LarryLPS</ns3:creator><ns5:owner>unassigned</ns5:owner><ns2:locked>false</ns2:locked><ns2:weight>1</ns2:weight><ns2:priority ns6:resource="https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/process-info/_VV4yoJWCEeKT7LKuSqKZNQ/priority/literal.priority.101">literal.priority.101</ns2:priority><ns2:suspect>false</ns2:suspect><ns2:variables/><ns2:testscript href="https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/resources/AlohaALM%27s+M3+Project+%28Quality+Management%29/testscript/urn:com.ibm.rqm:testscript:40"/><ns2:template href="https://jazz.net/sandbox01-qm/service/com.ibm.rqm.integration.service.IIntegrationService/resources/AlohaALM%27s+M3+Project+%28Quality+Management%29/template/testcase/com.ibm.rqm.planning.templates.testcase.default"/><com.ibm.rqm.planning.editor.section.testCaseDesign xmlns="http://jazz.net/xmlns/alm/qm/v0.1/" extensionDisplayName="RQM-KEY-TC-DESIGN-TITLE"><div xmlns="http://www.w3.org/1999/xhtml"><p>[\n]"
+2013-06-05 15:47:44,929 DEBUG wire:64 - << "[0x9]step 1 user doe this</p>[\n]"
+2013-06-05 15:47:44,929 DEBUG wire:64 - << "<p>[\n]"
+2013-06-05 15:47:44,929 DEBUG wire:64 - << "[0x9]step 2 userm does that<br/>[\n]"
+2013-06-05 15:47:44,929 DEBUG wire:64 - << "[0x9]Step 3 user does another thing</p>[\n]"
+2013-06-05 15:47:44,929 DEBUG wire:64 - << "<p>[\n]"
+2013-06-05 15:47:44,929 DEBUG wire:64 - << "[0x9]Step 3 user fills out fields</p>[\n]"
+2013-06-05 15:47:44,929 DEBUG wire:64 - << "<p>[\n]"
+2013-06-05 15:47:44,929 DEBUG wire:64 - << "[0x9]Step 5[0xc2][0xa0]<br/>[\n]"
+2013-06-05 15:47:44,929 DEBUG wire:64 - << "[0x9]Step 6</p>[\n]"
+2013-06-05 15:47:44,929 DEBUG wire:78 - << "</div></com.ibm.rqm.planning.editor.section.testCaseDesign></ns2:testcase>"
+2013-06-05 15:47:44,929 DEBUG ThreadSafeClientConnManager:217 - Released connection is reusable.
+2013-06-05 15:47:44,929 DEBUG ConnPoolByRoute:369 - Releasing connection [HttpRoute[{s}->https://jazz.net]][null]
+2013-06-05 15:47:44,929 DEBUG ConnPoolByRoute:389 - Pooling connection [HttpRoute[{s}->https://jazz.net]][null]; keep alive for 5000 MILLISECONDS
+2013-06-05 15:47:44,944 DEBUG IdleConnectionHandler:77 - Adding connection at: 1370461664944
+2013-06-05 15:47:44,944 DEBUG ConnPoolByRoute:622 - Notifying no-one, there are no waiting threads
+2013-06-05 15:47:44,944 DEBUG ThreadSafeClientConnManager:279 - Closing expired connections
+2013-06-05 15:47:44,944 DEBUG IdleConnectionHandler:144 - Checking for expired connections, now: 1370461664944

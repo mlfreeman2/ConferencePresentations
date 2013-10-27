@@ -1,0 +1,1 @@
+Please launch compiledHazelcastServer/normalMode.cmd on all your test machines before trying to run any demo scripts.

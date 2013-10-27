@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry combineaccessrules="false" kind="src" path="/Common"/>
+	<classpathentry exported="true" kind="lib" path="C:/SVN/IBMInnovate/trunk/jython2.5.2/jython.jar"/>
+	<classpathentry kind="con" path="com.rational.test.ft.libraries.FT_LIBRARIES"/>
+	<classpathentry kind="con" path="com.rational.test.ft.libraries.FT_TESTOBJECT"/>
+	<classpathentry kind="con" path="com.rational.test.ft.libraries.FT_CUSTOMIZATION"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="output" path=""/>
+</classpath>

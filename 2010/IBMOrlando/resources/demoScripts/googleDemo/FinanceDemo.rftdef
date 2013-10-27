@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScriptDefinition L=".ScriptDefinition">
+	<ScriptName>demoScripts.googleDemo.FinanceDemo</ScriptName>
+	<Language>java</Language>
+	<Map>resources/demoScripts/googleDemo/FinanceDemo.rftxmap</Map>
+	<Datapool/>
+	<DatapoolIterator/>
+	<HelperSuper/>
+	<ScriptNameMap L=".ScriptDefinitionNameMap"/>
+	<Properties L=".PropSet"/>
+	<ScriptEncoding>Cp1252</ScriptEncoding>
+	<KeywordName/>
+	<VisualScriptName/>
+	<DatapoolSet L=".DatapoolSet"/>
+</ScriptDefinition>

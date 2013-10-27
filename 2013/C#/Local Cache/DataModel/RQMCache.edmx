@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RQMDownloader.DataModel.RQMCache.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="RQMDownloaderDataModelRQMCacheStoreContainer">
+          <EntitySet Name="categories" EntityType="RQMDownloader.DataModel.RQMCache.Store.categories" store:Type="Tables" Schema="rqmmigration" />
+          <EntitySet Name="project" EntityType="RQMDownloader.DataModel.RQMCache.Store.project" store:Type="Tables" Schema="rqmmigration" />
+          <EntitySet Name="tc_to_ts" EntityType="RQMDownloader.DataModel.RQMCache.Store.tc_to_ts" store:Type="Tables" Schema="rqmmigration" />
+          <EntitySet Name="testcase" EntityType="RQMDownloader.DataModel.RQMCache.Store.testcase" store:Type="Tables" Schema="rqmmigration" />
+          <EntitySet Name="testscript" EntityType="RQMDownloader.DataModel.RQMCache.Store.testscript" store:Type="Tables" Schema="rqmmigration" />
+          <AssociationSet Name="categories_ibfk_1" Association="RQMDownloader.DataModel.RQMCache.Store.categories_ibfk_1">
+            <End Role="testcase" EntitySet="testcase" />
+            <End Role="categories" EntitySet="categories" />
+          </AssociationSet>
+          <AssociationSet Name="tc_to_ts_ibfk_1" Association="RQMDownloader.DataModel.RQMCache.Store.tc_to_ts_ibfk_1">
+            <End Role="testcase" EntitySet="testcase" />
+            <End Role="tc_to_ts" EntitySet="tc_to_ts" />
+          </AssociationSet>
+          <AssociationSet Name="tc_to_ts_ibfk_2" Association="RQMDownloader.DataModel.RQMCache.Store.tc_to_ts_ibfk_2">
+            <End Role="testscript" EntitySet="testscript" />
+            <End Role="tc_to_ts" EntitySet="tc_to_ts" />
+          </AssociationSet>
+          <AssociationSet Name="testcase_ibfk_1" Association="RQMDownloader.DataModel.RQMCache.Store.testcase_ibfk_1">
+            <End Role="project" EntitySet="project" />
+            <End Role="testcase" EntitySet="testcase" />
+          </AssociationSet>
+          <AssociationSet Name="testscript_ibfk_1" Association="RQMDownloader.DataModel.RQMCache.Store.testscript_ibfk_1">
+            <End Role="project" EntitySet="project" />
+            <End Role="testscript" EntitySet="testscript" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="categories">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TestcaseID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="Value" Type="varchar" Nullable="false" MaxLength="1024" />
+        </EntityType>
+        <EntityType Name="project">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="APIName" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="ServerURL" Type="varchar" Nullable="false" MaxLength="4096" />
+          <Property Name="ServerID" Type="varchar" Nullable="false" MaxLength="4096" />
+        </EntityType>
+        <EntityType Name="tc_to_ts">
+          <Key>
+            <PropertyRef Name="TestcaseID" />
+            <PropertyRef Name="TestscriptID" />
+          </Key>
+          <Property Name="TestcaseID" Type="int" Nullable="false" />
+          <Property Name="TestscriptID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="testcase">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="int" Nullable="false" />
+          <Property Name="WebID" Type="int" Nullable="false" />
+          <Property Name="URL" Type="varchar" Nullable="false" MaxLength="4096" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="2048" />
+          <Property Name="Description" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="testscript">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="int" Nullable="false" />
+          <Property Name="WebID" Type="int" Nullable="false" />
+          <Property Name="URL" Type="varchar" Nullable="false" MaxLength="4096" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="2048" />
+        </EntityType>
+        <Association Name="categories_ibfk_1">
+          <End Role="testcase" Type="RQMDownloader.DataModel.RQMCache.Store.testcase" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="categories" Type="RQMDownloader.DataModel.RQMCache.Store.categories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="testcase">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="categories">
+              <PropertyRef Name="TestcaseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tc_to_ts_ibfk_1">
+          <End Role="testcase" Type="RQMDownloader.DataModel.RQMCache.Store.testcase" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tc_to_ts" Type="RQMDownloader.DataModel.RQMCache.Store.tc_to_ts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="testcase">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tc_to_ts">
+              <PropertyRef Name="TestcaseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tc_to_ts_ibfk_2">
+          <End Role="testscript" Type="RQMDownloader.DataModel.RQMCache.Store.testscript" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tc_to_ts" Type="RQMDownloader.DataModel.RQMCache.Store.tc_to_ts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="testscript">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tc_to_ts">
+              <PropertyRef Name="TestscriptID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="testcase_ibfk_1">
+          <End Role="project" Type="RQMDownloader.DataModel.RQMCache.Store.project" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="testcase" Type="RQMDownloader.DataModel.RQMCache.Store.testcase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="project">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="testcase">
+              <PropertyRef Name="ProjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="testscript_ibfk_1">
+          <End Role="project" Type="RQMDownloader.DataModel.RQMCache.Store.project" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="testscript" Type="RQMDownloader.DataModel.RQMCache.Store.testscript" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="project">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="testscript">
+              <PropertyRef Name="ProjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LocalCache.DataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="RQMCache" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="LocalCategories" EntityType="LocalCache.DataModel.LocalCategory" />
+          <EntitySet Name="LocalProjects" EntityType="LocalCache.DataModel.LocalProject" />
+          <EntitySet Name="LocalTestcases" EntityType="LocalCache.DataModel.LocalTestcase" />
+          <EntitySet Name="LocalTestscripts" EntityType="LocalCache.DataModel.LocalTestscript" />
+          <AssociationSet Name="categories_ibfk_1" Association="LocalCache.DataModel.categories_ibfk_1">
+            <End Role="testcase" EntitySet="LocalTestcases" />
+            <End Role="categories" EntitySet="LocalCategories" />
+          </AssociationSet>
+          <AssociationSet Name="testcase_ibfk_1" Association="LocalCache.DataModel.testcase_ibfk_1">
+            <End Role="project" EntitySet="LocalProjects" />
+            <End Role="testcase" EntitySet="LocalTestcases" />
+          </AssociationSet>
+          <AssociationSet Name="testscript_ibfk_1" Association="LocalCache.DataModel.testscript_ibfk_1">
+            <End Role="project" EntitySet="LocalProjects" />
+            <End Role="testscript" EntitySet="LocalTestscripts" />
+          </AssociationSet>
+          <AssociationSet Name="tc_to_ts" Association="LocalCache.DataModel.tc_to_ts">
+            <End Role="testcase" EntitySet="LocalTestcases" />
+            <End Role="testscript" EntitySet="LocalTestscripts" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="LocalCategory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TestcaseID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Value" Type="String" Nullable="false" />
+          <NavigationProperty Name="Testcase" Relationship="LocalCache.DataModel.categories_ibfk_1" FromRole="categories" ToRole="testcase" />
+        </EntityType>
+        <EntityType Name="LocalProject">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="APIName" Type="String" Nullable="false" />
+          <NavigationProperty Name="Testcases" Relationship="LocalCache.DataModel.testcase_ibfk_1" FromRole="project" ToRole="testcase" />
+          <NavigationProperty Name="Testscripts" Relationship="LocalCache.DataModel.testscript_ibfk_1" FromRole="project" ToRole="testscript" />
+          <Property Type="String" Name="ServerURL" Nullable="false" />
+          <Property Type="String" Name="ServerID" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LocalTestcase">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="Int32" Nullable="false" />
+          <Property Name="WebID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" />
+          <NavigationProperty Name="Categories" Relationship="LocalCache.DataModel.categories_ibfk_1" FromRole="testcase" ToRole="categories" />
+          <NavigationProperty Name="Project" Relationship="LocalCache.DataModel.testcase_ibfk_1" FromRole="testcase" ToRole="project" />
+          <NavigationProperty Name="Testscripts" Relationship="LocalCache.DataModel.tc_to_ts" FromRole="testcase" ToRole="testscript" />
+          <Property Type="String" Name="URL" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LocalTestscript">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="Int32" Nullable="false" />
+          <Property Name="WebID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Project" Relationship="LocalCache.DataModel.testscript_ibfk_1" FromRole="testscript" ToRole="project" />
+          <NavigationProperty Name="Testcases" Relationship="LocalCache.DataModel.tc_to_ts" FromRole="testscript" ToRole="testcase" />
+          <Property Type="String" Name="URL" Nullable="false" />
+        </EntityType>
+        <Association Name="categories_ibfk_1">
+          <End Role="testcase" Type="LocalCache.DataModel.LocalTestcase" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="categories" Type="LocalCache.DataModel.LocalCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="testcase">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="categories">
+              <PropertyRef Name="TestcaseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="testcase_ibfk_1">
+          <End Role="project" Type="LocalCache.DataModel.LocalProject" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="testcase" Type="LocalCache.DataModel.LocalTestcase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="project">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="testcase">
+              <PropertyRef Name="ProjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="testscript_ibfk_1">
+          <End Role="project" Type="LocalCache.DataModel.LocalProject" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="testscript" Type="LocalCache.DataModel.LocalTestscript" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="project">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="testscript">
+              <PropertyRef Name="ProjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tc_to_ts">
+          <End Role="testcase" Type="LocalCache.DataModel.LocalTestcase" Multiplicity="*" />
+          <End Role="testscript" Type="LocalCache.DataModel.LocalTestscript" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RQMDownloaderDataModelRQMCacheStoreContainer" CdmEntityContainer="RQMCache">
+          <EntitySetMapping Name="LocalCategories"><EntityTypeMapping TypeName="LocalCache.DataModel.LocalCategory"><MappingFragment StoreEntitySet="categories">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="TestcaseID" ColumnName="TestcaseID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Value" ColumnName="Value" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="LocalProjects"><EntityTypeMapping TypeName="LocalCache.DataModel.LocalProject"><MappingFragment StoreEntitySet="project">
+            <ScalarProperty Name="ServerID" ColumnName="ServerID" />
+                <ScalarProperty Name="ServerURL" ColumnName="ServerURL" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="APIName" ColumnName="APIName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="LocalTestcases"><EntityTypeMapping TypeName="LocalCache.DataModel.LocalTestcase"><MappingFragment StoreEntitySet="testcase">
+            <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+            <ScalarProperty Name="WebID" ColumnName="WebID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="LocalTestscripts"><EntityTypeMapping TypeName="LocalCache.DataModel.LocalTestscript"><MappingFragment StoreEntitySet="testscript">
+            <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+            <ScalarProperty Name="WebID" ColumnName="WebID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="tc_to_ts" TypeName="LocalCache.DataModel.tc_to_ts" StoreEntitySet="tc_to_ts">
+            <EndProperty Name="testcase">
+              <ScalarProperty Name="ID" ColumnName="TestcaseID" />
+            </EndProperty>
+            <EndProperty Name="testscript">
+              <ScalarProperty Name="ID" ColumnName="TestscriptID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="RQMCache">
+        <EntityTypeShape EntityType="LocalCache.DataModel.LocalCategory" Width="1.5" PointX="5.25" PointY="3.875" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalCache.DataModel.LocalProject" Width="1.5" PointX="0.75" PointY="3.75" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalCache.DataModel.LocalTestcase" Width="1.5" PointX="3" PointY="3.5" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalCache.DataModel.LocalTestscript" Width="1.5" PointX="2.25" PointY="0.5" Height="2.1725878906249996" IsExpanded="true" />
+        <AssociationConnector Association="LocalCache.DataModel.categories_ibfk_1" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="4.8651432291666667" />
+          <ConnectorPoint PointX="5.25" PointY="4.8651432291666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalCache.DataModel.testcase_ibfk_1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="4.9324446614583328" />
+          <ConnectorPoint PointX="3" PointY="4.9324446614583328" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalCache.DataModel.testscript_ibfk_1" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.46875" PointY="3.75" />
+          <ConnectorPoint PointX="1.46875" PointY="1.6824446614583328" />
+          <ConnectorPoint PointX="2.25" PointY="1.6824446614583328" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalCache.DataModel.tc_to_ts" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.375" PointY="3.5" />
+          <ConnectorPoint PointX="3.375" PointY="2.6725878906249996" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
