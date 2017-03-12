@@ -59,7 +59,7 @@ The code for this talk is mixed in with the code for my talks from 2011 and 2010
 ###IBM Innovate 2011 
 ####QM-1284
 
-*RFT Testing Clouds*
+*RFT Testing Clouds - Multi-Process, Multi-Machine Automation*
 
 >See 2011/QM-1284.pdf for the PDF version of the slides.
 
