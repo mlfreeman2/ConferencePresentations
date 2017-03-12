@@ -1,9 +1,9 @@
-#InnovatePresentations
+#Conference Presentations
 
-IBM Innovate Talk Materials
+Conference Talk Materials
 
-Code and slides from IBM Innovate talks I gave and/or was involved with from 2010-on.
-All slides were done with either PowerPoint 2010, Mac PowerPoint 2008, or Mac PowerPoint 2011.
+Code and slides from conferences I've spoken at, mostly IBM Innovate/InterConnect talks I gave and/or was involved with from 2010-on.
+All slides were done with PowerPoint originally (Mac 2011/2016 mostly)
 
 I would **NOT** copy this code blindly into something critical.
 It was designed to be a teaching sample more than real world.
@@ -11,6 +11,7 @@ I knowingly removed lots of error handling I would normally have, in order to ma
 Also, this code will probably not be updated unless I use it in future Innovate talks.
 The code for 2012 builds on the code for 2011, which builds on the code for 2010.
 
+##2017
 ###IBM Interconnect 2017
 ####HDT-4470
 
@@ -20,6 +21,7 @@ The code for 2012 builds on the code for 2011, which builds on the code for 2010
 
 >There's no code with this one.
 
+##2013
 ###IBM Innovate 2013
 ####QM-1845
 
@@ -42,6 +44,7 @@ RQMExamples (a project containing the 3 Java examples – 2 console based and 1 
 
 >The RQMSession classes in both Java and C# should be identical in capability.
 
+##2012
 ###IBM Innovate 2012 
 ####QM-1213
 
@@ -52,6 +55,7 @@ The code for this talk is mixed in with the code for my talks from 2011 and 2010
 
 >See 2012/PowerPoint/QM-1213.ppt for the PowerPoint version of the slides.
 
+##2011
 ###IBM Innovate 2011 
 ####QM-1284
 
@@ -59,6 +63,7 @@ The code for this talk is mixed in with the code for my talks from 2011 and 2010
 
 >See 2011/QM-1284.pdf for the PDF version of the slides.
 
+##2010
 ###IBM Innovate 2010
 ####QM-1510A
 
