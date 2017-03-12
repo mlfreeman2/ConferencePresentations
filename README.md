@@ -11,6 +11,15 @@ I knowingly removed lots of error handling I would normally have, in order to ma
 Also, this code will probably not be updated unless I use it in future Innovate talks.
 The code for 2012 builds on the code for 2011, which builds on the code for 2010.
 
+###IBM Interconnect 2017
+####HDT-4470
+
+*Automating Automation, Cheaply*
+
+>My efforts to design and build a self-service automation lab and VM system on the cheap, heavily inspired by cloud providers.
+
+>There's no code with this one.
+
 ###IBM Innovate 2013
 ####QM-1845
 
