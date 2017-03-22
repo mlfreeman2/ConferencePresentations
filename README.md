@@ -1,4 +1,4 @@
-#Conference Presentations
+# Conference Presentations
 
 Conference Talk Materials
 
@@ -11,9 +11,9 @@ I knowingly removed lots of error handling I would normally have, in order to ma
 Also, this code will probably not be updated unless I use it in future Innovate talks.
 The code for 2012 builds on the code for 2011, which builds on the code for 2010.
 
-##2017
-###IBM Interconnect 2017
-####HDT-4470
+## 2017
+### IBM Interconnect 2017
+#### HDT-4470
 
 *Automating Automation, Cheaply*
 
@@ -21,9 +21,9 @@ The code for 2012 builds on the code for 2011, which builds on the code for 2010
 
 >There's no code with this one.
 
-##2013
-###IBM Innovate 2013
-####QM-1845
+## 2013
+### IBM Innovate 2013
+#### QM-1845
 
 *Rational Quality Manager’s REST API: Tips, Tricks, and Best Practices*
 
@@ -44,9 +44,9 @@ RQMExamples (a project containing the 3 Java examples – 2 console based and 1 
 
 >The RQMSession classes in both Java and C# should be identical in capability.
 
-##2012
-###IBM Innovate 2012 
-####QM-1213
+## 2012
+### IBM Innovate 2012 
+#### QM-1213
 
 *Rational Functional Tester scripting with Jython*
 
@@ -55,17 +55,17 @@ The code for this talk is mixed in with the code for my talks from 2011 and 2010
 
 >See 2012/PowerPoint/QM-1213.ppt for the PowerPoint version of the slides.
 
-##2011
-###IBM Innovate 2011 
-####QM-1284
+## 2011
+### IBM Innovate 2011 
+#### QM-1284
 
 *RFT Testing Clouds - Multi-Process, Multi-Machine Automation*
 
 >See 2011/QM-1284.pdf for the PDF version of the slides.
 
-##2010
-###IBM Innovate 2010
-####QM-1510A
+## 2010
+### IBM Innovate 2010
+#### QM-1510A
 
 *Reducing the cost of RFT script maintenance with advanced RFT script development and maintenance tips*
 
